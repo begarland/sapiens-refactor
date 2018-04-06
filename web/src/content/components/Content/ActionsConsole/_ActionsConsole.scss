@@ -1,0 +1,15 @@
+#actions-console-root {
+  width: 66%;
+  background-color: $purple;
+  height: 100vh;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: $header-height;
+  border-left: $gray-border;
+
+  @media (max-width: $landscape-phone-and-below-max-width){
+    top: $mobile-header-height;
+    width: 100vw;
+  }
+}

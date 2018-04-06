@@ -1,8 +1,5 @@
 import * as React from 'react'
-import LabelComponent from '../../common/LabelComponent/LabelComponent'
-
 const wizardLogo = './assets/images/logo.png'
-
 
 interface HeaderTypes {
 

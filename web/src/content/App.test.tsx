@@ -11,20 +11,15 @@ Enzyme.configure({adapter: new Adapter()})
 
 describe('<App/>', () => {
 
-    const navigateToReduxFunction = sinon.spy()
-    const navigateToObservableFunction = sinon.spy()
-    const goBackToAppFunction = sinon.spy()
-    const triggerObservableFunction = sinon.spy()
-    const logoClickFunction = sinon.spy()
+    const navigateToNutritionFunction = sinon.spy()
+    const navigateToActionsFunction = sinon.spy()
+
 
     const AppAllProps = (
         <App
             appState={appState}
-            navigateToRedux={navigateToReduxFunction}
-            navigateToObservable={navigateToObservableFunction}
-            goBackToApp={goBackToAppFunction}
-            triggerObservable={triggerObservableFunction}
-            logoClick={logoClickFunction}
+            navigateToNutrition={navigateToNutritionFunction}
+            navigateToActions={navigateToActionsFunction}
         />)
 
     let AppAllPropsShallow

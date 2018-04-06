@@ -24,3 +24,15 @@
   text-align: left;
   margin-top: 5px;
 }
+
+.inline-button-container {
+  display: block;
+}
+
+.button {
+  @include button;
+}
+
+.inline-button {
+  display: inline;
+}

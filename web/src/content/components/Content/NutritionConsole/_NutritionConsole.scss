@@ -1,0 +1,15 @@
+#nutrition-console-root {
+  width: 34%;
+  background-color: $teal;
+  height: 100vh;
+  display: block;
+  position: absolute;
+  left: 0;
+  top: $header-height;
+  border-right: $gray-border;
+
+  @media (max-width: $landscape-phone-and-below-max-width){
+    top: $mobile-header-height;
+    width: 100vw;
+  }
+}

@@ -1,33 +1,14 @@
 import {appState, AppStateTypes} from '../store/templates/appState'
 
 import { LOCATION_CHANGE } from 'react-router-redux'
-import {CHANGE_INPUT_VALUE, SLIDE_BOX, SPIN_LOGO_CHANGE, STOP_BOX} from '../actions/actionTypes'
+import {CHANGE_INPUT_VALUE, SWITCH_BUTTON} from '../actions/actionTypes'
 
 export default (state: AppStateTypes = appState, action) => {
     switch (action.type) {
         case LOCATION_CHANGE: {
             return {
                 ...state,
-                showNavigateButton: action.payload.pathname === '/',
-                moveBox: false,
-            }
-        }
-        case SLIDE_BOX: {
-            return {
-                ...state,
-                moveBox: true,
-            }
-        }
-        case STOP_BOX: {
-            return {
-                ...state,
-                moveBox: false,
-            }
-        }
-        case SPIN_LOGO_CHANGE: {
-            return {
-                ...state,
-                spinLogo: action.spinChange
+                activeFooterButton: (action.payload.pathname === '/actions'? 'actions' : 'nutrition')
             }
         }
         case CHANGE_INPUT_VALUE: {
@@ -37,6 +18,12 @@ export default (state: AppStateTypes = appState, action) => {
                     ...state.inputs,
                     [action.key]: action.value
                 }
+            }
+        }
+        case SWITCH_BUTTON: {
+            return {
+                ...state,
+                activeFooterButton: action.button
             }
         }
         default: {

@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom'
 import { push } from 'react-router-redux'
 import App from './App'
 import {AppStateTypes} from '../redux/store/templates/appState'
-import {changeInputValue, slideBox, spinLogoChange} from '../redux/actions/index'
+import {changeInputValue, switchButtonSelected} from '../redux/actions/index'
 
 interface mapStateToPropsTypes {
     appState: AppStateTypes;
@@ -17,20 +17,12 @@ const mapStateToProps = (state: mapStateToPropsTypes, ownProps) =>  {
 
 const mapDispatchToProps = (dispatch, ownProps) => {
     return {
-        navigateToRedux: () => {
-            dispatch(push('/redux'))
-        },
-        navigateToObservable: () => {
-            dispatch(push('/redux-observable'))
-        },
-        goBackToApp: () => {
+        navigateToNutrition: () => {
+            dispatch(switchButtonSelected())
             dispatch(push('/'))
         },
-        triggerObservable: () => {
-            dispatch(slideBox())
-        },
-        logoClick: () => {
-            dispatch(spinLogoChange())
+        navigateToActions: () => {
+            dispatch(push('/actions'))
         },
         inputChange: (key, value) => {
             dispatch(changeInputValue(key, value))

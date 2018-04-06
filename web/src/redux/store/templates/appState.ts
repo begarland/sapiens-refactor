@@ -7,6 +7,7 @@ export const appState: AppStateTypes = {
         age: null,
         favoriteColor: '',
     },
+    activeFooterButton: 'nutrition',
 }
 
 export interface AppStateTypes {
@@ -14,6 +15,8 @@ export interface AppStateTypes {
     moveBox: boolean;
     spinLogo: boolean;
     inputs: InputTypes;
+    activeFooterButton: string;
+
 
 }
 

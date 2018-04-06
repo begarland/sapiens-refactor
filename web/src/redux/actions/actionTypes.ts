@@ -1,4 +1,2 @@
-export const SLIDE_BOX = 'SLIDE BOX'
-export const STOP_BOX = 'STOP BOX'
-export const SPIN_LOGO_CHANGE = 'SPIN LOGO CHANGE'
+export const SWITCH_BUTTON = 'SWITCH_BUTTON'
 export const CHANGE_INPUT_VALUE = 'CHANGE INPUT VALUE'

@@ -1,25 +1,25 @@
 import * as React from 'react'
 import Header from './components/Header/Header'
 
-import Routes from './sample/Routes'
 import { AppStateTypes } from '../redux/store/templates/appState'
+import Footer from './components/Footer/Footer'
+import Content from './components/Content/Content'
 
 const reactLogo = './assets/images/reactReduxTS.png'
 
-interface AppTypes {
+export interface AppTypes {
     appState: AppStateTypes;
-    navigateToRedux: (MouseEvent) => void;
-    navigateToObservable: (MouseEvent) => void;
-    goBackToApp: (MouseEvent) => void;
-    triggerObservable: (MouseEvent) => void;
-    logoClick: (MouseEvent) => void;
+    navigateToNutrition: (MouseEvent) => void;
+    navigateToActions: (MouseEvent) => void;
+
 }
 
 const App = (props: AppTypes) => {
     return (
         <div className="App">
             <Header/>
-            <Routes {...props}/>
+            <Content {...props}/>
+            <Footer {...props}/>
         </div>
     )
 }

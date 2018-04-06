@@ -1,0 +1,40 @@
+#footer-root {
+  width: 100vw;
+  height: $mobile-footer-height;
+  background-color: $gray;
+  position: fixed;
+  bottom: 0;
+  margin-bottom: 0;
+  padding-bottom: 0;
+
+  @media (min-width: $landscape-phone-and-below-max-width + 1) and (max-width: $landscape-phone-to-portrait-tablet-max-width){
+    display: none;
+  }
+  @media (min-width: $portrait-tablet-to-landscape-and-desktop-min-width){
+    display: none;
+  }
+  @media (min-width: $large-desktop-min-width){
+    display: none;
+  }
+
+
+  .footer-button {
+    font-family: $header-font;
+    width: 50%;
+    border: none;
+    height: $mobile-footer-height;
+    font-size: 24px;
+    background-color: $green;
+    border-right: $black-border;
+    border-radius: 0px;
+    margin: 0;
+    padding: 0;
+  }
+
+  .inactive-footer-button {
+    opacity: .5;
+    background-color: transparent;
+  }
+
+
+}

@@ -1,5 +1,5 @@
 #header-root {
-  width: 100%;
+  width: 100vw;
   height: $header-height;
   background-color: $green;
   position: absolute;
@@ -19,11 +19,56 @@
     @include no-select;
     cursor: pointer;
     position: absolute;
-    top: 7.5px;
-    left: 55px;
-    width: 400px;
     margin: 0;
+    padding: 0;
     text-align: left;
+
+
+    @media (min-width: $portrait-tablet-to-landscape-and-desktop-min-width){
+      width: 400px;
+      top: 7.5px;
+      left: 55px;
+
+    }
+    @media (min-width: $large-desktop-min-width){
+
+    }
   }
+
+  @media (min-width: $landscape-phone-and-below-max-width + 1) and (max-width: $landscape-phone-to-portrait-tablet-max-width){
+    height: $mobile-header-height;
+
+    .header-logo-img{
+      left: -5px;
+      top: 0px;
+    }
+
+    .header-logo {
+      width: 300px;
+      font-size: 35px;
+      left: 40px;
+      top: 5px;
+      text-align: left;
+    }
+  }
+
+  @media (max-width: $landscape-phone-and-below-max-width){
+    height: $mobile-header-height;
+
+    .header-logo-img{
+      left: -5px;
+      top: 0px;
+    }
+
+    .header-logo {
+      width: 300px;
+      font-size: 35px;
+      left: 40px;
+      top: 5px;
+      text-align: left;
+    }
+  }
+
+
 
 }
