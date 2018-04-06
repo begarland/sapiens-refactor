@@ -1,9 +1,22 @@
 .label {
   @include bold-font;
   text-align: right;
-  width: 100px;
+  width: 120px;
   margin-right: 5px;
   display: inline-block;
+}
+
+.data-label {
+  font-weight: normal;
+  text-align: left;
+  width: 50px;
+  display: inline-block;
+}
+
+.number-label {
+  text-align: right;
+  margin-left: -15px;
+  width: 50px;
 }
 
 .heading {
@@ -41,4 +54,9 @@
 
 .inline-button {
   display: inline;
+}
+
+.label-data-array-display-container {
+  margin: auto;
+  margin-bottom: 5px;
 }

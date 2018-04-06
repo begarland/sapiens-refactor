@@ -18,4 +18,17 @@
     width: 100vw;
     border-right: none;
   }
+
+  .mx-console{
+    border-bottom: $black-border;
+  }
+
+  #nutrient-console-root {
+
+    .forced-space {
+      height: 20px;
+      background-color: blue;
+    }
+  }
+
 }
