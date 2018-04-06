@@ -35,7 +35,7 @@ const SliderBar = (props: SliderBarTypes) => {
             <div
                 id={props.id}
                 className="outermost-upper-slider-bar-container"
-                style={{marginLeft: `${props.location - 6}px`}}
+                style={{marginLeft: `${props.location - 9}px`}}
             >
                 <div id="upper-slider-bar-img-container">
                     {props.fill &&
@@ -75,7 +75,7 @@ const SliderBar = (props: SliderBarTypes) => {
             <div
                 id={props.id}
                 className="outermost-lower-slider-bar-container"
-                style={{marginLeft: `${props.location - 6}px`}}
+                style={{marginLeft: `${props.location - 9}px`}}
             >
                 <div id="vertical-line-lower" />
                 <div id="lower-slider-bar-img-container" >

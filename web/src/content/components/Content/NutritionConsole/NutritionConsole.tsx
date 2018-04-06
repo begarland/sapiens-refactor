@@ -1,8 +1,11 @@
 import * as React from 'react'
-import ProgressBar from '../../../common/ProgressBar/ProgressBar'
-import LabelComponent from '../../../common/LabelComponent/LabelComponent'
+import ProgressBar from '../../../common/ProgressBar/RegularProgressBar/ProgressBar'
+import HeadingComponent from '../../../common/HeadingComponent/HeadingComponent'
+import MiniProgressBar from '../../../common/ProgressBar/MiniProgressBar/MiniProgressBar'
 
 interface NutritionConsoleTypes {
+
+
 }
 
 const NutritionConsole = (props: NutritionConsoleTypes) => {
@@ -20,7 +23,7 @@ const NutritionConsole = (props: NutritionConsoleTypes) => {
 
     return (
         <div id="nutrition-console-root">
-            <LabelComponent label="Calories" hideColon={true}/>
+            <HeadingComponent heading="Calories"/>
             <ProgressBar
                 type="test"
                 secondLowerSlider="test"
@@ -31,7 +34,8 @@ const NutritionConsole = (props: NutritionConsoleTypes) => {
                 barInnerFillColor={CalorieBarColors.barInnerFillColor}
                 barTotalFillColor={CalorieBarColors.barTotalFillColor}
             />
-            <LabelComponent label="Hydration" hideColon={true}/>
+            <hr/>
+            <HeadingComponent heading="Hydration"/>
             <ProgressBar
                 type="test"
                 secondLowerSlider="test"
@@ -42,6 +46,9 @@ const NutritionConsole = (props: NutritionConsoleTypes) => {
                 barInnerFillColor={HydrationBarColors.barInnerFillColor}
                 barTotalFillColor={HydrationBarColors.barTotalFillColor}
             />
+            <hr/>
+            <MiniProgressBar type="test" barFills={{barTotalFill: 100, barFill: 30}} />
+
         </div>
     )
 }

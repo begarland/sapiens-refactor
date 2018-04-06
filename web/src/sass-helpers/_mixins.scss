@@ -44,6 +44,14 @@
   height: 15px;
 }
 
+@mixin label{
+  @include bold-font;
+  text-align: right;
+  width: 100px;
+  margin-right: 5px;
+  display: inline-block;
+}
+
 @mixin bold-font {
   font-family: $regular-font;
   font-weight: bold;

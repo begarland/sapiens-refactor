@@ -1,0 +1,104 @@
+.outermost-upper-mini-slider-bar-container {
+  z-index: 6;
+  width: 22px;
+  margin-top: 47px;
+  position: absolute;
+  margin-left: -6px;
+
+}
+
+#upper-mini-slider-bar-img-container{
+  width: 22px;
+  margin: auto;
+}
+
+
+#mini-vertical-line-upper{
+  width: 1px;
+  height: 35px;
+  border-left-width: 3px;
+  border-left-style: solid;
+  border-left-color: $black;
+  margin: auto;
+  margin-top: 4px;
+
+}
+
+.upper-slider-circle{
+  width: 21px;
+  height: 21px;
+  border-radius: 50%;
+  margin: auto;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+}
+
+
+.upper-slider-reticle-bar{
+  background-color: $black;
+  width: 1px;
+  position: absolute;
+
+}
+
+.reticle-circle{
+  border: $black 2px solid;
+  position: relative;
+  margin: auto;
+}
+
+
+.upper-bar-top{
+  height: $bar-height;
+  width: $bar-width;
+  right: 44%;
+  top: -.5px;
+
+}
+.upper-bar-right{
+  @include transform(180deg);
+  height: $bar-width;
+  width: $bar-height;
+  right: -.5px;
+  top: 44%;
+}
+.upper-bar-bottom{
+  height: $bar-height;
+  width: $bar-width;
+  right: 44%;
+  bottom: -.5px;
+}
+.upper-bar-left{
+  @include transform(180deg);
+  height: $bar-width;
+  width: $bar-height;
+  left: -.5px;
+  top: 44%;
+}
+
+.upper-slider-reticle-circle{
+  border: $black 1.5px solid;
+  border-radius: 50%;
+  position: absolute;
+}
+
+.upper-middle-circle{
+  border: $black 1.5px solid;
+  height: 13px;
+  width: 13px;
+  top: 2px;
+  bottom:2px;
+  right: 2px;
+  left: 2px;
+  box-sizing: border-box;
+
+}
+
+.upper-inner-circle{
+  border: $black 1.5px solid;
+  height: 5px;
+  width: 5px;
+  top: 2.5px;
+  left: 2.5px;
+  box-sizing: border-box;
+}
