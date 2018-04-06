@@ -3,19 +3,19 @@
   height: 100%;
   display: inline;
 
-
-  #mobile-content{
+  #mobile-and-portrait-tablet-content{
     display: none;
-    @media (max-width: $landscape-phone-and-below-max-width){
+    @media (max-width: $portrait-tablet-to-landscape-and-desktop-min-width){
       display: block;
     }
   }
 
-  #tablet-and-above-content{
-    display: block;
-    @media (max-width: $landscape-phone-and-below-max-width){
-      display: none;
+  #landscape-tablet-and-above-content{
+    display: none;
+    @media (min-width: $portrait-tablet-to-landscape-and-desktop-min-width + 1){
+      display: block;
     }
   }
+
 
 }

@@ -8,11 +8,11 @@ interface ContentTypes {}
 const Content = (props: ContentTypes) => {
     return (
         <div id="content-root">
-            <div id="tablet-and-above-content">
+            <div id="landscape-tablet-and-above-content">
                 <NutritionConsole {...props}/>
                 <ActionsConsole {...props}/>
             </div>
-            <div id="mobile-content">
+            <div id="mobile-and-portrait-tablet-content">
                 <Switch>
                     <Route
                         exact={true}
