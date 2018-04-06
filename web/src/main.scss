@@ -29,9 +29,11 @@ html {
 }
 
 /* sass files */
-@import 'content/App';
-@import 'content/common/common';
+@import 'content/common/_common';
+@import 'content/common/ProgressBar/_ProgressBar';
+@import 'content/common/ProgressBar/SliderBar/_SliderBar';
 
+@import 'content/App';
 @import 'content/components/Header/_Header';
 @import 'content/components/Footer/_Footer';
 @import 'content/components/Content/_Content';
