@@ -1,0 +1,9 @@
+.idea/*
+node_modules/
+.sass-cache/*
+web/dist/
+web/public/bundle.js
+web/public/main.css
+web/public/main.css.map
+
+

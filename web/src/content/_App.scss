@@ -1,0 +1,57 @@
+.App {
+  text-align: center;
+  box-sizing: border-box;
+}
+
+
+.App-header {
+  background-color: $black;
+  padding: 20px;
+  color: white;
+
+}
+
+.App-intro {
+  font-size: large;
+}
+
+.header-logo {
+  width: 100px;
+  cursor: pointer;
+}
+
+.spin-logo{
+  -webkit-animation: rotate-vertical-center 2s cubic-bezier(0.860, 0.000, 0.070, 1.000) both infinite;
+  animation: rotate-vertical-center 2s cubic-bezier(0.860, 0.000, 0.070, 1.000) both infinite;
+}
+
+
+.header-text{
+  font-family: $header-font;
+}
+
+button {
+  @include button;
+}
+
+
+@-webkit-keyframes rotate-vertical-center {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}
+@keyframes rotate-vertical-center {
+  0% {
+    -webkit-transform: rotateY(0);
+    transform: rotateY(0);
+  }
+  100% {
+    -webkit-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
+}

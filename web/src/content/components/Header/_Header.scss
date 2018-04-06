@@ -1,0 +1,29 @@
+#header-root {
+  width: 100%;
+  height: $header-height;
+  background-color: $green;
+  position: absolute;
+  top: 0;
+
+  .header-logo-img {
+    @include no-select;
+    cursor: pointer;
+    width: 50px;
+    top: 5px;
+    left: 5px;
+    position: absolute;
+  }
+
+  .header-logo {
+    @include header-text;
+    @include no-select;
+    cursor: pointer;
+    position: absolute;
+    top: 7.5px;
+    left: 55px;
+    width: 400px;
+    margin: 0;
+    text-align: left;
+  }
+
+}

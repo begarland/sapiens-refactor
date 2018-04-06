@@ -1,0 +1,25 @@
+{
+  "compilerOptions": {
+    "outDir": "web/dist",
+    "module": "esnext",
+    "target": "es6",
+    "lib": ["es6", "dom"],
+    "sourceMap": true,
+    "allowJs": true,
+    "jsx": "react",
+    "moduleResolution": "node",
+    "pretty": true
+  },
+
+  "exclude": [
+    "node_modules",
+    "server",
+    "public",
+    "scripts",
+    "src/setupTests.ts"
+  ],
+  "include": [
+    "web/src/**/*.tsx",
+    "web/src/**/*.ts"
+  ]
+}

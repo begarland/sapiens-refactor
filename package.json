@@ -1,0 +1,129 @@
+{
+  "_from": "react-redux-express-ts-template",
+  "_id": "react-redux-express-ts-template@2.0.1",
+  "_inBundle": false,
+  "_integrity": "sha512-GEdZF8sy0Zfyyy/MUrPMICoqBZyxuYTWjr6du5nrEiP3Bvm+pFOpJJya1kWwEzARbBMttq50+Z/tZzH5cBRsww==",
+  "_location": "/react-redux-express-ts-template",
+  "_phantomChildren": {},
+  "_requested": {
+    "type": "tag",
+    "registry": true,
+    "raw": "react-redux-express-ts-template",
+    "name": "react-redux-express-ts-template",
+    "escapedName": "react-redux-express-ts-template",
+    "rawSpec": "",
+    "saveSpec": null,
+    "fetchSpec": "latest"
+  },
+  "_requiredBy": [
+    "#USER",
+    "/"
+  ],
+  "_resolved": "https://registry.npmjs.org/react-redux-express-ts-template/-/react-redux-express-ts-template-2.0.1.tgz",
+  "_shasum": "af0e4986c1e75217948678aa58ff5b025fd4052b",
+  "_spec": "react-redux-express-ts-template",
+  "_where": "/Users/brandygarland/Desktop/normal_test",
+  "babel": {
+    "presets": [
+      "es2015",
+      "react",
+      "stage-0"
+    ],
+    "plugins": [
+      "babel-plugin-transform-decorators-legacy"
+    ]
+  },
+  "bugs": {
+    "url": "https://github.com/begarland/react-redux-express-template/issues"
+  },
+  "bundleDependencies": false,
+  "dependencies": {
+    "axios": "0.17.0",
+    "body-parser": "~1.18.2",
+    "cookie-parser": "~1.4.3",
+    "date-input-polyfill": "^2.14.0",
+    "debug": "~2.6.9",
+    "enzyme": "^3.3.0",
+    "enzyme-adapter-react-16": "^1.1.1",
+    "express": "~4.15.5",
+    "express-react-views": "^0.10.4",
+    "history": "^4.6.3",
+    "jquery": "3.2.1",
+    "moment": "2.19.3",
+    "morgan": "~1.9.0",
+    "react": "16.0.0",
+    "react-dom": "16.0.0",
+    "react-redux": "^5.0.6",
+    "react-router": "^4.2.0",
+    "react-router-dom": "^4.2.2",
+    "react-router-redux": "^5.0.0-alpha.8",
+    "redux": "^3.7.2",
+    "redux-logger": "^3.0.6",
+    "redux-observable": "^0.18.0",
+    "redux-promise-middleware": "^4.3.0",
+    "redux-thunk": "^2.2.0",
+    "rxjs": "^5.5.7"
+  },
+  "deprecated": false,
+  "description": "some normal_test description",
+  "devDependencies": {
+    "@types/history": "^4.6.2",
+    "@types/jest": "^20.0.8",
+    "@types/jquery": "^3.3.1",
+    "@types/node": "^8.10.2",
+    "@types/react": "^16.0.18",
+    "@types/react-dom": "^16.0.2",
+    "@types/react-router-redux": "^5.0.8",
+    "@types/redux-logger": "^3.0.5",
+    "@types/redux-promise-middleware": "0.0.8",
+    "babel-plugin-transform-decorators-legacy": "^1.3.4",
+    "babel-preset-es2015": "^6.24.1",
+    "babel-preset-react": "^6.24.1",
+    "babel-preset-stage-0": "^6.22.0",
+    "babelify": "^7.3.0",
+    "browserify-css": "^0.12.0",
+    "envify": "^4.1.0",
+    "jest": "^22.4.3",
+    "sinon": "^4.4.9",
+    "ts-jest": "^22.4.2",
+    "typescript": "^2.8.1",
+    "uglifyify": "^4.0.5"
+  },
+  "homepage": "https://github.com/begarland/react-redux-express-template#readme",
+  "jest": {
+    "moduleFileExtensions": [
+      "ts",
+      "tsx",
+      "js"
+    ],
+    "transform": {
+      "\\.(ts|tsx)$": "<rootDir>/node_modules/ts-jest/preprocessor.js"
+    },
+    "testMatch": [
+      "**/__tests__/**/*.ts?(x)",
+      "**/?(*.)(spec|test).tsx?(x)"
+    ],
+    "moduleDirectories": [
+      "node_modules"
+    ]
+  },
+  "name": "normal_test",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/begarland/react-redux-express-template.git"
+  },
+  "scripts": {
+    "build": "browserify -t [ babelify --presets [ es2015 react babel-preset-stage-0 ] --plugins [ babel-plugin-transform-decorators-legacy ] ] web/dist/index.js -o web/public/bundle.js",
+    "init": "sh init.sh",
+    "prod": "browserify ./web/dist/index.js -g [ envify --NODE_ENV production ] -g [ uglifyify ] -t [ babelify --presets [ es2015 react babel-preset-stage-0 ] --plugins [ babel-plugin-transform-decorators-legacy ] ] | uglifyjs --compress --mangle > ./web/public/bundle.js",
+    "sass": "sass --watch web/src/main.scss:web/public/main.css",
+    "server": "supervisor ./server/bin/www",
+    "start": "npm run tsc & npm run sass & npm run web & npm run server",
+    "test": "jest --color --verbose --expand --watchAll",
+    "tsc": "tsc --watch",
+    "web": "watchify -t [ babelify --presets [ es2015 react babel-preset-stage-0 ] --plugins [ babel-plugin-transform-decorators-legacy ] ] web/dist/index.js -o web/public/bundle.js -v"
+  },
+  "version": "0.0.0",
+  "private": true,
+  "license": "BSD"
+}
