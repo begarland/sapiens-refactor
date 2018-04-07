@@ -15,15 +15,18 @@ const Content = (props: ContentTypes) => {
             </div>
             <div id="mobile-and-portrait-tablet-content">
                 <Switch>
-                    <Route
-                        exact={true}
-                        path="/"
-                        render={() => {
-                            return (
-                                <NutritionConsole {...props}/>
-                            )
-                        }}
-                    />
+                    {["/", "/index.html"].map((path, index) =>
+                        <Route
+                            key={index}
+                            exact={true}
+                            path={path}
+                            render={() => {
+                                return (
+                                    <NutritionConsole {...props}/>
+                                )
+                            }}
+                        />
+                    )}
                     <Route
                         exact={true}
                         path="/actions"

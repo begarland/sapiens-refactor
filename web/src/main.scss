@@ -10,10 +10,11 @@
 }
 
 body {
-   margin: 0;
-   padding: 0;
-   overflow-x: hidden;
- }
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
 
 html {
   width: 100vw;
@@ -21,7 +22,7 @@ html {
   overflow-y: hidden;
 }
 
-#root{
+#root {
   overflow-x: hidden;
   width: 100vw;
   min-height: 100vh;

@@ -7,8 +7,6 @@ import Content from './components/Content/Content'
 import {DailyStateTypes} from '../redux/store/templates/dailyState'
 import {UserStateTypes} from '../redux/store/templates/userState'
 
-const reactLogo = './assets/images/reactReduxTS.png'
-
 export interface AppTypes {
     appState: AppStateTypes;
     dailyState: DailyStateTypes;

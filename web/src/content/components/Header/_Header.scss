@@ -5,6 +5,7 @@
   position: absolute;
   top: 0;
   z-index: 10;
+  overflow-y: hidden;
 
   .header-logo-img {
     @include no-select;
