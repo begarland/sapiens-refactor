@@ -6,6 +6,8 @@ import {shallow, mount, render} from 'enzyme'
 
 import App from './App'
 import {appState} from '../redux/store/templates/appState'
+import {dailyState} from '../redux/store/templates/dailyState'
+import {userState} from '../redux/store/templates/userState'
 
 Enzyme.configure({adapter: new Adapter()})
 
@@ -18,6 +20,8 @@ describe('<App/>', () => {
     const AppAllProps = (
         <App
             appState={appState}
+            dailyState={dailyState}
+            userState={userState}
             navigateToNutrition={navigateToNutritionFunction}
             navigateToActions={navigateToActionsFunction}
         />)

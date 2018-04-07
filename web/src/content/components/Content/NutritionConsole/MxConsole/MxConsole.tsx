@@ -4,11 +4,13 @@ import {BarColorsTypes} from '../../MiscellaneousInterfaces'
 import ProgressBar from '../../../../common/ProgressBar/RegularProgressBar/ProgressBar'
 import HeadingComponent from '../../../../common/HeadingComponent/HeadingComponent'
 import LabelDataArrayDisplay from '../../../../common/LabelDataDisplay/LabelDataArrayDisplay'
+import {ProgressBarFillTypes} from '../../../../../redux/store/templates/dailyState'
 
 interface MxConsoleTypes {
     heading: string;
     labelDataArray: LabelDataDisplayTypes[];
     barColors: BarColorsTypes;
+    barFills: ProgressBarFillTypes;
 
 }
 const MxConsole = (props: MxConsoleTypes) => {
@@ -24,6 +26,10 @@ const MxConsole = (props: MxConsoleTypes) => {
                 barFillColor={props.barColors.barFillColor}
                 barInnerFillColor={props.barColors.barInnerFillColor}
                 barTotalFillColor={props.barColors.barTotalFillColor}
+                barFill={props.barFills.fill}
+                barInnerFill={props.barFills.innerFill}
+                barTargetFill={props.barFills.targetFill}
+                barTotalFill={props.barFills.totalFill}
             />
             <LabelDataArrayDisplay labelDataArray={props.labelDataArray}/>
         </div>

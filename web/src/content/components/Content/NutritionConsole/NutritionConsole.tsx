@@ -2,8 +2,9 @@ import * as React from 'react'
 import CalorieConsole from './MxConsole/Calorie/Calorie'
 import HydrationConsole from './MxConsole/Hydration/Hydration'
 import NutrientsConsole from './NutrientsConsole/NutrientsConsole'
+import {AppTypes} from '../../../App'
 
-interface NutritionConsoleTypes {
+interface NutritionConsoleTypes extends AppTypes {
 
 
 }
@@ -11,9 +12,9 @@ interface NutritionConsoleTypes {
 const NutritionConsole = (props: NutritionConsoleTypes) => {
     return (
         <div id="nutrition-console-root">
-            <CalorieConsole/>
-            <HydrationConsole/>
-            <NutrientsConsole/>
+            <CalorieConsole {...props}/>
+            <HydrationConsole {...props}/>
+            <NutrientsConsole {...props}/>
 
         </div>
     )
