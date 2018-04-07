@@ -11,6 +11,7 @@ interface MxConsoleTypes {
     labelDataArray: LabelDataDisplayTypes[];
     barColors: BarColorsTypes;
     barFills: ProgressBarFillTypes;
+    onClick: (Event) => void;
 
 }
 const MxConsole = (props: MxConsoleTypes) => {
@@ -30,6 +31,7 @@ const MxConsole = (props: MxConsoleTypes) => {
                 barInnerFill={props.barFills.innerFill}
                 barTargetFill={props.barFills.targetFill}
                 barTotalFill={props.barFills.totalFill}
+                onClick={props.onClick}
             />
             <LabelDataArrayDisplay labelDataArray={props.labelDataArray}/>
         </div>

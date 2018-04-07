@@ -49,6 +49,7 @@ const CalorieConsole = (props: CalorieConsoleTypes) => {
                labelDataArray={CalorieLabelData}
                barColors={CalorieBarColors}
                barFills={CalorieBarFills}
+               onClick={() => console.log('calories clicked')}
            />
         </div>
     )

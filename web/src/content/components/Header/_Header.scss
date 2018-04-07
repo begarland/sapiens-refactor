@@ -2,8 +2,9 @@
   width: 100vw;
   height: $header-height;
   background-color: $green;
-  position: absolute;
+  position: fixed;
   top: 0;
+  z-index: 10;
 
   .header-logo-img {
     @include no-select;
@@ -22,6 +23,7 @@
     margin: 0;
     padding: 0;
     text-align: left;
+
 
 
     @media (min-width: $portrait-tablet-to-landscape-and-desktop-min-width){

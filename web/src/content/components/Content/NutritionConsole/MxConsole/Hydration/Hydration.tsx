@@ -51,6 +51,8 @@ const HydrationConsole = (props: HydrationConsoleTypes) => {
                 labelDataArray={HydrationLabelData}
                 barColors={HydrationBarColors}
                 barFills={HydrationBarFills}
+                onClick={() => console.log('hydration clicked')}
+
             />
 
         </div>

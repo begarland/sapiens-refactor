@@ -2,8 +2,9 @@ import * as React from 'react'
 import { Route, Switch } from 'react-router'
 import NutritionConsole from './NutritionConsole/NutritionConsole'
 import ActionsConsole from './ActionsConsole/ActionsConsole'
+import {AppTypes} from '../../App'
 
-interface ContentTypes {}
+interface ContentTypes extends AppTypes {}
 
 const Content = (props: ContentTypes) => {
     return (
