@@ -124,7 +124,7 @@ export const dailyState: DailyStateTypes = {
             id: 'iron',
             units: 'mg',
             dvUnits: 'mg',
-            dailyValue: 14.004000000000001,
+            dailyValue: 14.004,
             consumedValue: 10,
             tagname: 'FE',
         },

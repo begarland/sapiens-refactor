@@ -1,11 +1,12 @@
 #actions-console-root {
-  width: 66%;
+  width: calc(100vw - #{$nutrition-console-width});
   height: 100vh;
   display: block;
   position: absolute;
   right: 0;
   top: $header-height;
   border-left: $gray-border;
+  background-color: #11AA99;
 
   @media(max-width: $landscape-phone-to-portrait-tablet-max-width) {
     top: $mobile-header-height;
@@ -17,4 +18,6 @@
     width: 100vw;
     border-left: none;
   }
+
+
 }

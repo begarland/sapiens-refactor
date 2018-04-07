@@ -1,20 +1,32 @@
 #content-root{
   width: 100vw;
-  height: 100%;
-  display: inline;
+  height: calc(100% - #{$mobile-header-height} - #{$mobile-footer-height});
+  position: absolute;
+  top: 0;
+  left: 0;
+
 
   #mobile-and-portrait-tablet-content{
     display: none;
+
     @media (max-width: $portrait-tablet-to-landscape-and-desktop-min-width){
       display: block;
+
     }
   }
 
   #landscape-tablet-and-above-content{
     display: none;
+
     @media (min-width: $portrait-tablet-to-landscape-and-desktop-min-width + 1){
       display: block;
     }
+  }
+
+  @media (min-width: $portrait-tablet-to-landscape-and-desktop-min-width + 1){
+    display: inline;
+    height: calc(100% - #{$header-height});
+
   }
 
 

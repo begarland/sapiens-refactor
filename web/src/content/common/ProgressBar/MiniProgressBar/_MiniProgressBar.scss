@@ -56,7 +56,7 @@
 }
 
 .progress-bar-small-label{
-  @include label;
+  @include progressBar-label;
   font-size: 12px;
 
 }

@@ -10,7 +10,6 @@ export const MiniProgressBarArrayDisplay = (props: MiniProgressBarArrayDisplayPr
     return(
         <div id="array-display">
             {props.array.map(function(value: any, index: number) {
-                console.log(value)
                 return(
                     <div className="mini-progress-bar-with-label-container" key={index}>
                         <h4 className="progress-bar-label">{value.type}:</h4>

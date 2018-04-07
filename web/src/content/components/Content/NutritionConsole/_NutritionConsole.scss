@@ -1,19 +1,21 @@
 #nutrition-console-root {
-  width: 34%;
-  height: 100vh;
+  width: $nutrition-console-width;
+  height: 100%;
   display: block;
   position: absolute;
-  left: 0;
   top: $header-height;
+  left: 0;
   border-right: $gray-border;
   overflow-y: scroll;
-  padding-bottom: 60px;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
+
 
 
   @media(max-width: $landscape-phone-to-portrait-tablet-max-width) {
     top: $mobile-header-height;
-    width: 100vw;
-    border-left: none;
+    border-right: none;
   }
 
   @media (max-width: $portrait-tablet-to-landscape-and-desktop-min-width){
@@ -24,6 +26,7 @@
   .mx-console{
     border-bottom: $black-border;
   }
+
 
 
 }
