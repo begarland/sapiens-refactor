@@ -18,6 +18,7 @@ body {
 
 html {
   width: 100vw;
+  height: 100vh;
   overflow-x: hidden;
   overflow-y: hidden;
 }
@@ -31,15 +32,21 @@ html {
 
 /* sass files */
 @import 'content/common/_common';
-@import 'content/common/ProgressBar/RegularProgressBar/ProgressBar';
+@import 'content/common/ProgressBar/RegularProgressBar/_ProgressBar';
 @import 'content/common/ProgressBar/RegularProgressBar/SliderBar/_SliderBar';
 @import 'content/common/ProgressBar/MiniProgressBar/_MiniProgressBar';
 @import 'content/common/ProgressBar/MiniProgressBar/MiniSliderBar/_MiniSliderBar';
 
 @import 'content/App';
 @import 'content/components/Header/_Header';
+@import 'content/components/Header/UserActions/_UserActions';
 @import 'content/components/Footer/_Footer';
 @import 'content/components/Content/_Content';
 @import 'content/components/Content/NutritionConsole/_NutritionConsole';
 @import 'content/components/Content/ActionsConsole/_ActionsConsole';
+@import 'content/components/Content/ActionsConsole/ActionsHome/_ActionsHome';
+@import 'content/components/Content/ActionsConsole/ActionsHome/ActionsButtons/_ActionsButtons';
+
+
+
 

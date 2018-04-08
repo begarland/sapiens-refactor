@@ -15,6 +15,11 @@ describe('<App/>', () => {
 
     const navigateToNutritionFunction = sinon.spy()
     const navigateToActionsFunction = sinon.spy()
+    const navigateToNestedActionFunction = sinon.spy()
+    const navigateBackFromNestedActionFunction = sinon.spy()
+    const navigateToFunction = sinon.spy()
+    const toggleUserActionsFunction = sinon.spy()
+    const toggleModalFunction = sinon.spy()
 
 
     const AppAllProps = (
@@ -24,6 +29,12 @@ describe('<App/>', () => {
             userState={userState}
             navigateToNutrition={navigateToNutritionFunction}
             navigateToActions={navigateToActionsFunction}
+            navigateToNestedAction={navigateToNestedActionFunction}
+            navigateBackFromNestedAction={navigateBackFromNestedActionFunction}
+            navigateTo={navigateToFunction}
+            toggleUserActions={toggleUserActionsFunction}
+            toggleModal={toggleModalFunction}
+
         />)
 
     let AppAllPropsShallow

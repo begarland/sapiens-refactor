@@ -8,6 +8,9 @@ export const appState: AppStateTypes = {
         favoriteColor: '',
     },
     activeFooterButton: 'nutrition',
+    showActionsBackButton: false,
+    showUserActions: false,
+    showModal: false,
 }
 
 export interface AppStateTypes {
@@ -16,6 +19,9 @@ export interface AppStateTypes {
     spinLogo: boolean;
     inputs: InputTypes;
     activeFooterButton: string;
+    showActionsBackButton: boolean;
+    showUserActions: boolean;
+    showModal: boolean;
 
 
 }

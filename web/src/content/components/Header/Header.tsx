@@ -1,7 +1,9 @@
 import * as React from 'react'
-const wizardLogo = './assets/images/logo.png'
+import {AppTypes} from '../../App'
+import UserActions from './UserActions/UserActions'
+const wizardLogo = '/assets/images/logo.png'
 
-interface HeaderTypes {
+interface HeaderTypes extends AppTypes {
 
 }
 
@@ -15,6 +17,18 @@ const Header = (props: HeaderTypes) => {
                 alt="wizard-logo"
             />
             <h2 className="header-logo">Wellness Wizard</h2>
+            <span
+                id="header-menu-button"
+                onClick={props.toggleUserActions}
+            >
+                <i
+                    id="header-icon"
+                    className="fas fa-bars"
+                />
+            </span>
+            {props.appState.showUserActions &&
+                <UserActions {...props} />
+            }
         </div>
     )
 }

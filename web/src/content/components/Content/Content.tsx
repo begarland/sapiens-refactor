@@ -28,7 +28,6 @@ const Content = (props: ContentTypes) => {
                         />
                     )}
                     <Route
-                        exact={true}
                         path="/actions"
                         render={() => {
                             return (
