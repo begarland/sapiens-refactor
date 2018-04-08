@@ -1,12 +1,33 @@
 #actions-console-root {
   width: calc(100vw - #{$nutrition-console-width});
-  height: 100vh;
+  height: 100%;
   display: block;
   position: absolute;
   right: 0;
   top: $header-height;
   border-left: $gray-border;
-  background-color: #11AA99;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding-bottom: 10px;
+
+  #actions-back-button-span {
+    position: absolute;
+    left: 10px;
+    top: 10px;
+    border: $black-border;
+    border-radius: 5px;
+    height: 30px;
+    width: 30px;
+
+  }
+
+  #actions-back-button {
+
+    font-size: 30px;
+    color: $button-fill;
+    margin-top: -2px;
+  }
+
 
   @media(max-width: $landscape-phone-to-portrait-tablet-max-width) {
     top: $mobile-header-height;

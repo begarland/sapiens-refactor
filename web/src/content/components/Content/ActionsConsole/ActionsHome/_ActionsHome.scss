@@ -1,0 +1,16 @@
+#mobile-and-portrait-tablet-actions-content {
+  display: none;
+
+  @media (max-width: $portrait-tablet-to-landscape-and-desktop-min-width){
+    display: block;
+
+  }
+}
+
+#landscape-tablet-and-above-actions-content {
+  display: none;
+
+  @media (min-width: $portrait-tablet-to-landscape-and-desktop-min-width + 1){
+    display: block;
+  }
+}

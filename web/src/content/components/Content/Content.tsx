@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router'
 import NutritionConsole from './NutritionConsole/NutritionConsole'
 import ActionsConsole from './ActionsConsole/ActionsConsole'
 import {AppTypes} from '../../App'
+import UserActions from './UserActions/UserActions'
 
 interface ContentTypes extends AppTypes {}
 
@@ -28,7 +29,6 @@ const Content = (props: ContentTypes) => {
                         />
                     )}
                     <Route
-                        exact={true}
                         path="/actions"
                         render={() => {
                             return (
@@ -38,6 +38,7 @@ const Content = (props: ContentTypes) => {
                     />
                 </Switch>
             </div>
+            <UserActions {...props} />
         </div>
     )
 }

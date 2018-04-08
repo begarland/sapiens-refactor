@@ -1,0 +1,26 @@
+#actions-buttons-container {
+  #mobile-and-portrait-tablet-actions-buttons {
+    display: none;
+
+    @media (max-width: $portrait-tablet-to-landscape-and-desktop-min-width){
+      display: block;
+
+    }
+
+
+    .button {
+      width: 95%;
+      font-size: 24px;
+
+    }
+  }
+
+  #landscape-tablet-and-above-actions-buttons {
+    display: none;
+
+    @media (min-width: $portrait-tablet-to-landscape-and-desktop-min-width + 1){
+      display: block;
+    }
+  }
+
+}

@@ -4,7 +4,7 @@
   background-color: $green;
   position: absolute;
   top: 0;
-  z-index: 10;
+  z-index: $header-index;
   overflow-y: hidden;
 
   .header-logo-img {
@@ -24,17 +24,50 @@
     margin: 0;
     padding: 0;
     text-align: left;
+  }
 
+  #header-menu-button {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    height: 40px;
+    width: 40px;
 
-
-    @media (min-width: $portrait-tablet-to-landscape-and-desktop-min-width){
-      width: 400px;
-      top: 7.5px;
-      left: 55px;
+    #header-icon{
+      color: $white;
+      font-size: 40px;
 
     }
-    @media (min-width: $large-desktop-min-width){
+  }
 
+  @media (max-width: $landscape-phone-and-below-max-width){
+    height: $mobile-header-height;
+
+    .header-logo-img{
+      left: -5px;
+      top: 0px;
+    }
+
+    .header-logo {
+      width: 250px;
+      font-size: 30px;
+      left: 40px;
+      top: 7px;
+      text-align: left;
+    }
+
+    #header-menu-button {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      height: 30px;
+      width: 30px;
+
+      #header-icon{
+        color: $white;
+        font-size: 30px;
+
+      }
     }
   }
 
@@ -53,23 +86,45 @@
       top: 5px;
       text-align: left;
     }
+
+    #header-menu-button {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      height: 35px;
+      width: 35px;
+
+      #header-icon{
+        color: $white;
+        font-size: 35px;
+
+      }
+    }
   }
 
-  @media (max-width: $landscape-phone-and-below-max-width){
-    height: $mobile-header-height;
-
-    .header-logo-img{
-      left: -5px;
-      top: 0px;
-    }
-
+  @media (min-width: $portrait-tablet-to-landscape-and-desktop-min-width){
     .header-logo {
-      width: 300px;
-      font-size: 35px;
-      left: 40px;
-      top: 5px;
-      text-align: left;
+      width: 400px;
+      top: 7.5px;
+      left: 55px;
     }
+    #header-menu-button {
+      position: absolute;
+      right: 10px;
+      top: 10px;
+      height: 40px;
+      width: 40px;
+
+      #header-icon{
+        color: $white;
+        font-size: 40px;
+
+      }
+    }
+
+  }
+  @media (min-width: $large-desktop-min-width){
+
   }
 
 
