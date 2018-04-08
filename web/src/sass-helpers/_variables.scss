@@ -39,4 +39,10 @@ $nutrition-console-width: 430px;
 
 
 /* z-indices */
-$header-index: 10;
+$progress-bar-fill-index: 1;
+$progress-bar-inner-fill-index: 2;
+$progress-bar-outline-index: 3;
+$progress-bar-slider-index: 3;
+
+$header-and-footer-index: 10;
+$invisible-div-index: 15;

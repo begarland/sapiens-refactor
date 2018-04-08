@@ -1,0 +1,11 @@
+#modal {
+
+  background-color: $teal;
+  position: absolute;
+  left: 5%;
+  top: calc(5% + #{$header-height});
+  right: 5%;
+  bottom: 5%;
+
+  z-index: $invisible-div-index + 1;
+}

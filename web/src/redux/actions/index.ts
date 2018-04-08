@@ -2,9 +2,7 @@ import {
     CHANGE_INPUT_VALUE,
     SWITCH_BUTTON, TOGGLE_MODAL,
     TOGGLE_USER_ACTIONS,
-
 } from './actionTypes'
-
 
 export const changeInputValue = (key: string, value: string) => {
     return ({type: CHANGE_INPUT_VALUE, key, value})

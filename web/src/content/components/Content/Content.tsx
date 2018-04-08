@@ -4,6 +4,7 @@ import NutritionConsole from './NutritionConsole/NutritionConsole'
 import ActionsConsole from './ActionsConsole/ActionsConsole'
 import {AppTypes} from '../../App'
 import UserActions from './UserActions/UserActions'
+import Modal from '../../common/Modal/Modal'
 
 interface ContentTypes extends AppTypes {}
 
@@ -39,6 +40,7 @@ const Content = (props: ContentTypes) => {
                 </Switch>
             </div>
             <UserActions {...props} />
+            {props.appState.showModal && <Modal />}
         </div>
     )
 }

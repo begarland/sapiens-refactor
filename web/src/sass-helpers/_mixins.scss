@@ -47,7 +47,7 @@
 @mixin label{
   @include bold-font;
   text-align: right;
-  width: 200px;
+  width: 150px;
   margin-right: 5px;
   display: inline-block;
 }
@@ -55,7 +55,7 @@
 @mixin progressBar-label{
   @include bold-font;
   text-align: center;
-  width: 200px;
+  width: 150px;
   margin-right: 5px;
   display: inline-block;
 }

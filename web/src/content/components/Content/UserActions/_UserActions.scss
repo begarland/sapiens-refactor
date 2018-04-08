@@ -7,7 +7,7 @@
   position: absolute;
   right: 0;
   top: $header-height;
-  z-index: 20;
+  z-index: $invisible-div-index + 1;
   height: 80px;
   width: 130px;
   transform: translateX(130px);
@@ -49,8 +49,6 @@
 #user-actions-drawer.slide-out {
   -webkit-animation: slide-up .1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
   animation: slide-up .1s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
-  z-index: $header-index - 1;
-
 }
 
 @-webkit-keyframes slide-down {

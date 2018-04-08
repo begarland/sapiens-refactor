@@ -1,6 +1,6 @@
 #nutrition-console-root {
   width: $nutrition-console-width;
-  height: 100%;
+  height: calc(100% - #{$header-height});
   display: block;
   position: absolute;
   top: $header-height;
@@ -9,13 +9,14 @@
   overflow-y: scroll;
   overflow-x: hidden;
   -webkit-overflow-scrolling: touch;
-  padding-bottom: 10px;
 
 
 
   @media(max-width: $landscape-phone-to-portrait-tablet-max-width) {
     top: $mobile-header-height;
     border-right: none;
+    height: calc(100% - #{$mobile-header-height} - #{$mobile-footer-height});
+
   }
 
   @media (max-width: $portrait-tablet-to-landscape-and-desktop-min-width){
@@ -27,6 +28,11 @@
     border-bottom: $black-border;
   }
 
-
+  #nutrients-console-root{
+    @media (max-height: 600px) {
+      padding-bottom: 70px;
+    }
+    padding-bottom: 20px;
+  }
 
 }

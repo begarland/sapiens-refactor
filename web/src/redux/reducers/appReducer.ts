@@ -44,7 +44,7 @@ export default (state: AppStateTypes = appState, action) => {
                 ...state,
                 showModal: action.show,
                 showUserActions: false,
-                userActionsDrawerClass: 'slide-out',
+                userActionsDrawerClass: (state.showUserActions ? 'slide-out' : ''),
             }
         }
         default: {
