@@ -63,8 +63,8 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         toggleUserActions: () => {
             dispatch(toggleUserActions())
         },
-        toggleModal: () => {
-            dispatch(toggleModal())
+        toggleModal: (modalSelection: string) => (event: MouseEvent) => {
+            dispatch(toggleModal(modalSelection))
         },
     }
 }

@@ -4,7 +4,7 @@
   background-color: $green;
   position: absolute;
   top: 0;
-  z-index: 10;
+  z-index: $header-index;
   overflow-y: hidden;
 
   .header-logo-img {

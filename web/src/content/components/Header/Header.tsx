@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {AppTypes} from '../../App'
-import UserActions from './UserActions/UserActions'
+import UserActions from '../Content/UserActions/UserActions'
 const wizardLogo = '/assets/images/logo.png'
 
 interface HeaderTypes extends AppTypes {
@@ -26,9 +26,6 @@ const Header = (props: HeaderTypes) => {
                     className="fas fa-bars"
                 />
             </span>
-            {props.appState.showUserActions &&
-                <UserActions {...props} />
-            }
         </div>
     )
 }

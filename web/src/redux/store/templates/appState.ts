@@ -10,6 +10,7 @@ export const appState: AppStateTypes = {
     activeFooterButton: 'nutrition',
     showActionsBackButton: false,
     showUserActions: false,
+    userActionsDrawerClass: '',
     showModal: false,
 }
 
@@ -21,7 +22,9 @@ export interface AppStateTypes {
     activeFooterButton: string;
     showActionsBackButton: boolean;
     showUserActions: boolean;
+    userActionsDrawerClass: string;
     showModal: boolean;
+
 
 
 }

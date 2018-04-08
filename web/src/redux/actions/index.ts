@@ -6,7 +6,7 @@ import {
 } from './actionTypes'
 
 
-export const changeInputValue = (key, value) => {
+export const changeInputValue = (key: string, value: string) => {
     return ({type: CHANGE_INPUT_VALUE, key, value})
 }
 
@@ -26,8 +26,8 @@ export const toggleUserActions = () => (dispatch, getState) => {
     dispatch({type: TOGGLE_USER_ACTIONS, show: !currentUserActionStatus})
 }
 
-export const toggleModal = () => (dispatch, getState) => {
-    const currentModalStatus = getState().appState.showModals
+export const toggleModal = (modalSelection: string) => (dispatch, getState) => {
+    const currentModalStatus = getState().appState.showModal
     dispatch({type: TOGGLE_MODAL, show: !currentModalStatus})
 }
 
