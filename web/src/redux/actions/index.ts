@@ -2,9 +2,7 @@ import {
     CHANGE_INPUT_VALUE,
     SWITCH_BUTTON, TOGGLE_MODAL,
     TOGGLE_USER_ACTIONS,
-
 } from './actionTypes'
-
 
 export const changeInputValue = (key: string, value: string) => {
     return ({type: CHANGE_INPUT_VALUE, key, value})
@@ -28,6 +26,6 @@ export const toggleUserActions = () => (dispatch, getState) => {
 
 export const toggleModal = (modalSelection: string) => (dispatch, getState) => {
     const currentModalStatus = getState().appState.showModal
-    dispatch({type: TOGGLE_MODAL, show: !currentModalStatus})
+    dispatch({type: TOGGLE_MODAL, show: !currentModalStatus, modalSelection})
 }
 

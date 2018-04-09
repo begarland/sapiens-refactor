@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {AppTypes} from '../../App'
-import UserActions from '../Content/UserActions/UserActions'
+import IconComponent from '../../common/IconComponent/IconComponent'
 const wizardLogo = '/assets/images/logo.png'
 
 interface HeaderTypes extends AppTypes {
@@ -17,15 +17,9 @@ const Header = (props: HeaderTypes) => {
                 alt="wizard-logo"
             />
             <h2 className="header-logo">Wellness Wizard</h2>
-            <span
-                id="header-menu-button"
-                onClick={props.toggleUserActions}
-            >
-                <i
-                    id="header-icon"
-                    className="fas fa-bars"
-                />
-            </span>
+            <IconComponent id="header-menu" faIcon="bars" onClick={props.toggleUserActions}/>
+
+
         </div>
     )
 }

@@ -70,6 +70,6 @@
   top: 0;
   left: 0;
   background: transparent;
-  z-index: 15;
+  z-index: $invisible-div-index;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }

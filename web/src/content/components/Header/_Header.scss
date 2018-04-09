@@ -4,7 +4,7 @@
   background-color: $green;
   position: absolute;
   top: 0;
-  z-index: $header-index;
+  z-index: $header-and-footer-index;
   overflow-y: hidden;
 
   .header-logo-img {
@@ -26,14 +26,14 @@
     text-align: left;
   }
 
-  #header-menu-button {
+  #header-menu-span {
     position: absolute;
     right: 10px;
     top: 10px;
     height: 40px;
     width: 40px;
 
-    #header-icon{
+    #header-menu{
       color: $white;
       font-size: 40px;
 
@@ -56,14 +56,14 @@
       text-align: left;
     }
 
-    #header-menu-button {
+    #header-menu-span {
       position: absolute;
       right: 10px;
       top: 10px;
       height: 30px;
       width: 30px;
 
-      #header-icon{
+      #header-menu{
         color: $white;
         font-size: 30px;
 
@@ -87,14 +87,14 @@
       text-align: left;
     }
 
-    #header-menu-button {
+    #header-menu-span {
       position: absolute;
       right: 10px;
       top: 10px;
       height: 35px;
       width: 35px;
 
-      #header-icon{
+      #header-menu{
         color: $white;
         font-size: 35px;
 
@@ -108,14 +108,14 @@
       top: 7.5px;
       left: 55px;
     }
-    #header-menu-button {
+    #header-menu-span {
       position: absolute;
       right: 10px;
       top: 10px;
       height: 40px;
       width: 40px;
 
-      #header-icon{
+      #header-menu{
         color: $white;
         font-size: 40px;
 

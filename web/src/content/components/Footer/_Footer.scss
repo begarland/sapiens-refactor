@@ -6,7 +6,7 @@
   bottom: 0;
   margin-bottom: 0;
   padding-bottom: 0;
-  z-index: 10;
+  z-index: $header-and-footer-index;
 
 
   @media (min-width: $portrait-tablet-to-landscape-and-desktop-min-width + 1){

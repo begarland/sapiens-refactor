@@ -10,24 +10,29 @@
 }
 
 body {
+  width: 100%;
+  height: 100%;
   margin: 0;
   padding: 0;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
+
 }
 
 html {
   width: 100vw;
   height: 100vh;
-  overflow-x: hidden;
-  overflow-y: hidden;
+  overflow: hidden;
+  position: fixed;
 }
 
 #root {
+  overflow-y: hidden;
   overflow-x: hidden;
   width: 100vw;
-  min-height: 100vh;
+  height: 100%;
   background-color: $white;
+
+
 }
 
 /* sass files */
@@ -36,6 +41,7 @@ html {
 @import 'content/common/ProgressBar/RegularProgressBar/SliderBar/_SliderBar';
 @import 'content/common/ProgressBar/MiniProgressBar/_MiniProgressBar';
 @import 'content/common/ProgressBar/MiniProgressBar/MiniSliderBar/_MiniSliderBar';
+@import 'content/common/Modal/_Modal';
 
 @import 'content/App';
 @import 'content/components/Header/_Header';

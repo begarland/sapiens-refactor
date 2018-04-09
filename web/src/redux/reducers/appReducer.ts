@@ -1,7 +1,7 @@
-import {appState, AppStateTypes} from '../store/templates/appState'
+import { appState, AppStateTypes } from '../store/templates/appState'
 
 import { LOCATION_CHANGE } from 'react-router-redux'
-import {CHANGE_INPUT_VALUE, SWITCH_BUTTON, TOGGLE_MODAL, TOGGLE_USER_ACTIONS} from '../actions/actionTypes'
+import { CHANGE_INPUT_VALUE, SWITCH_BUTTON, TOGGLE_MODAL, TOGGLE_USER_ACTIONS } from '../actions/actionTypes'
 
 const pathArray = ['/favorites', '/history', '/goals', '/search']
 const showActionsBackButton = (pathname) => pathArray.some(pathType => pathname.includes(pathType))
@@ -43,8 +43,9 @@ export default (state: AppStateTypes = appState, action) => {
             return {
                 ...state,
                 showModal: action.show,
+                modalSelection: action.modalSelection,
                 showUserActions: false,
-                userActionsDrawerClass: 'slide-out',
+                userActionsDrawerClass: (state.showUserActions ? 'slide-out' : ''),
             }
         }
         default: {

@@ -1,12 +1,11 @@
 import * as React from 'react'
 import Header from './components/Header/Header'
-
-import { AppStateTypes } from '../redux/store/templates/appState'
 import Footer from './components/Footer/Footer'
 import Content from './components/Content/Content'
-import {DailyStateTypes} from '../redux/store/templates/dailyState'
-import {UserStateTypes} from '../redux/store/templates/userState'
 import InvisibleFullScreen from './common/InvisibleFullScreen/InvisibleFullScreen'
+import { AppStateTypes } from '../redux/store/templates/appState'
+import { DailyStateTypes } from '../redux/store/templates/dailyState'
+import { UserStateTypes } from '../redux/store/templates/userState'
 
 export interface AppTypes {
     appState: AppStateTypes;

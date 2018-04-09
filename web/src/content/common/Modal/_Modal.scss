@@ -1,0 +1,120 @@
+#modal-full-screen-container {
+  height: 100vh;
+  width: 100vw;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#modal {
+  max-height: 85%;
+  min-width: 350px;
+  background-color: $white;
+  border: $black-border;
+  border-radius: $border-radius;
+  text-align: center;
+  position: relative;
+  z-index: $invisible-div-index + 1;
+
+  #modal-header-container {
+    background-color: $gray;
+    border-bottom: $black-border;
+
+    .modal-heading {
+      text-align: left;
+      font-size: 22px;
+      color: $white;
+      padding-left: 2px;
+    }
+
+    #close-button-span {
+      @include icon-span;
+      width: 21px;
+      height: 20px;
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      background-color: $green;
+
+      #close-button {
+        @include icon;
+        font-size: 16px;
+        color: $white;
+      }
+    }
+  }
+
+  #modal-content-container {
+    overflow-y: auto;
+    display: block;
+    max-height: 60vh;
+  }
+
+  #modal-buttons-container {
+    position: relative;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+    background-color: $white;
+  }
+  @media (max-width: $landscape-phone-and-below-max-width) {
+    width: 95%;
+    max-height: calc(100% - #{$mobile-header-height} - #{$mobile-footer-height} - 45px);
+    margin-bottom: $modal-mobile-bottom-pad;
+
+    @media (max-height: $safari-browser-height) {
+      max-height: calc(100% - #{$mobile-header-height} - #{$mobile-footer-height} - #{$safari-bottom-pad} - 45px);
+      margin-bottom: $safari-bottom-pad + $modal-mobile-bottom-pad;
+    }
+
+    #modal-content-container {
+      max-height: 57vh;
+    }
+  }
+
+  @media (min-width: $landscape-phone-and-below-max-width ) and (max-width: $landscape-phone-to-portrait-tablet-max-width) {
+    width: 76%;
+    max-height: calc(100% - #{$mobile-header-height} - #{$mobile-footer-height});
+    #modal-content-container {
+      max-height: 57vh;
+    }
+
+
+    /* fix for status bar IOS*/
+    @media (min-height: $web-app-height-status-bar-iPhone6Plus) and (max-height: $web-app-height-iPhone6Plus - 1)
+        and (max-width: $web-app-width-iPhone6Plus) {
+      max-height: calc(100% - #{$mobile-header-height} - #{$mobile-footer-height} - 20px);
+      margin-bottom: $modal-mobile-bottom-pad + 3px;
+      #modal-content-container {
+        max-height: 56vh;
+      }
+
+
+    }
+
+    @media (min-height: $web-app-height-status-bar-iPhone6) and (max-height: $web-app-height-iPhone6 - 1)
+        and (max-width: $web-app-width-iPhone6) {
+      max-height: calc(100% - #{$mobile-header-height} - #{$mobile-footer-height} - 20px);
+      margin-bottom: $modal-mobile-bottom-pad + 4px;
+      #modal-content-container {
+        max-height: 52vh;
+      }
+    }
+
+
+
+  }
+
+  @media (min-width: $portrait-tablet-to-landscape-and-desktop-min-width) and (max-width: $large-desktop-min-width - 1){
+    max-width: 76%;
+  }
+
+  @media (min-width: $large-desktop-min-width) {
+    max-width: 50%;
+  }
+
+
+
+}

@@ -4,7 +4,7 @@ $bar-width: 2px;
 
 
 .outermost-upper-slider-bar-container {
-  z-index: 6;
+  z-index: $progress-bar-slider-index;
   width: 22px;
   margin-top: 10px;
   position: absolute;
@@ -108,6 +108,7 @@ $bar-width: 2px;
 }
 
 .outermost-lower-slider-bar-container {
+  z-index: $progress-bar-slider-index;
   width: 22px;
   position: absolute;
   margin-top: 50px;

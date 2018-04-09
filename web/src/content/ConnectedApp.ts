@@ -2,10 +2,10 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { push } from 'react-router-redux'
 import App from './App'
-import {AppStateTypes} from '../redux/store/templates/appState'
 import {changeInputValue, switchButtonSelected, toggleModal, toggleUserActions} from '../redux/actions/index'
-import {DailyStateTypes} from '../redux/store/templates/dailyState'
-import {UserStateTypes} from '../redux/store/templates/userState'
+import { AppStateTypes } from '../redux/store/templates/appState'
+import { DailyStateTypes } from '../redux/store/templates/dailyState'
+import { UserStateTypes } from '../redux/store/templates/userState'
 
 interface mapStateToPropsTypes {
     appState: AppStateTypes;
