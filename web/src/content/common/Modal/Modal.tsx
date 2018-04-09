@@ -16,7 +16,6 @@ const Modal = (props: ModalTypes) => {
         ModalHeaderComponent = (
             <ModalHeader
                 {...props.modalHeader}
-                additionalClasses="modal-heading"
             />
         )
     let ModalButtonsComponent
@@ -27,14 +26,14 @@ const Modal = (props: ModalTypes) => {
     }
 
     return (
-        <div id='modal' className={`${props.additionalClasses ? props.additionalClasses : ''}`}>
-            {ModalHeaderComponent}
-            <div id='modal-content-container'>
-                {props.modalContent}
+        <div id="modal-full-screen-container">
+            <div id='modal' className={`${props.additionalClasses ? props.additionalClasses : ''}`}>
+                {ModalHeaderComponent}
+                <div id='modal-content-container'>
+                    {props.modalContent}
+                </div>
+                {ModalButtonsComponent}
             </div>
-            {ModalButtonsComponent}
-
-
         </div>
     )
 }

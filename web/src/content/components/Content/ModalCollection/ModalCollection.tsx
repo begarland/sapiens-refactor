@@ -23,7 +23,7 @@ const ModalCollection = (props: ModalCollectionTypes) => {
     if (modalSelection === 'calories' || modalSelection === 'hydration'){
         modalHeader = {title: modalSelection, showCloseButton: true, closeModal: props.toggleModal('none')}
         ModalContent = (
-            <HeadingComponent heading={modalSelection}/>
+            <HeadingComponent heading={modalSelection} />
         )
         modalButtons = {buttonArray: UpdateAndCloseButtons}
     } else {
@@ -33,9 +33,7 @@ const ModalCollection = (props: ModalCollectionTypes) => {
     }
 
     return (
-        <div>
-            <Modal modalHeader={modalHeader} modalContent={ModalContent} modalButtons={modalButtons}/>
-        </div>
+        <Modal modalHeader={modalHeader} modalContent={ModalContent} modalButtons={modalButtons}/>
     )
 }
 

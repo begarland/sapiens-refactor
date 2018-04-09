@@ -2,11 +2,21 @@
 $landscape-phone-and-below-max-width: 480px;
 $landscape-phone-to-portrait-tablet-max-width: 767px;
 $portrait-tablet-to-landscape-and-desktop-min-width: 768px;
-$portrait-tablet-to-landscape-and-desktop-max-width: 979px;
+$portrait-tablet-to-landscape-and-desktop-max-width: 1024px;
 $large-desktop-min-width: 1200px;
 
-/* safari browser fix media query */
+/* iPhone browser fix */
 $safari-browser-height: 625px;
+$safari-bottom-pad: 60px;
+
+/* iPhone web-app status bar adjust fix*/
+$web-app-height-status-bar-iPhone6: 355px;
+$web-app-height-iPhone6: 375px;
+$web-app-width-iPhone6: 667px;
+$web-app-height-status-bar-iPhone6Plus: 394px;
+$web-app-height-iPhone6Plus: 414px;
+$web-app-width-iPhone6Plus: 736px;
+
 
 /* color blind safe color palette - see: https://personal.sron.nl/~pault/ */
 $gray: #777777;
@@ -49,3 +59,6 @@ $progress-bar-slider-index: 3;
 
 $header-and-footer-index: 10;
 $invisible-div-index: 15;
+
+/* margins */
+$modal-mobile-bottom-pad: 17px;
