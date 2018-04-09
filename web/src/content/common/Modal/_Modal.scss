@@ -8,11 +8,7 @@
   justify-content: center;
   align-items: center;
 }
-
-
-
 #modal {
-  min-height: 100px;
   max-height: 85%;
   min-width: 350px;
   background-color: $white;
@@ -25,6 +21,7 @@
   #modal-header-container {
     background-color: $gray;
     border-bottom: $black-border;
+
     .modal-heading {
       text-align: left;
       font-size: 22px;
@@ -50,10 +47,9 @@
   }
 
   #modal-content-container {
-    height: 500px;
     overflow-y: auto;
     display: block;
-    background-color: #992288;
+    max-height: 60vh;
   }
 
   #modal-buttons-container {
@@ -112,11 +108,11 @@
   }
 
   @media (min-width: $portrait-tablet-to-landscape-and-desktop-min-width) and (max-width: $large-desktop-min-width - 1){
-    width: 76%;
+    max-width: 76%;
   }
 
   @media (min-width: $large-desktop-min-width) {
-    width: 50%;
+    max-width: 50%;
   }
 
 
