@@ -11,7 +11,8 @@ export const appState: AppStateTypes = {
     showActionsBackButton: false,
     showUserActions: false,
     userActionsDrawerClass: '',
-    showModal: false,
+    showModal: true,
+    modalSelection: 'calories',
 }
 
 export interface AppStateTypes {
@@ -24,9 +25,7 @@ export interface AppStateTypes {
     showUserActions: boolean;
     userActionsDrawerClass: string;
     showModal: boolean;
-
-
-
+    modalSelection: string;
 }
 
 export interface InputTypes {

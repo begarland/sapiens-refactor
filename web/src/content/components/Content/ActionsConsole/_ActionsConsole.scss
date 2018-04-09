@@ -11,20 +11,15 @@
   padding-bottom: 10px;
 
   #actions-back-button-span {
+    @include icon-span;
     position: absolute;
     left: 10px;
     top: 10px;
-    border: $black-border;
-    border-radius: 5px;
-    height: 30px;
-    width: 30px;
 
   }
 
   #actions-back-button {
-
-    font-size: 30px;
-    color: $button-fill;
+    @include icon;
     margin-top: -2px;
   }
 

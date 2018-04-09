@@ -20,14 +20,13 @@
 
 @mixin button {
   margin-top: auto;
-  height: 25px;
   text-align: center;
   vertical-align: center;
   color: white;
   background-color: $button-fill;
   border-radius: $border-radius;
-  font-size: 13px;
-  font-weight: bold;
+  font-size: 16px;
+  font-family: $header-font;
   padding: 0 5px;
   border: $black 2px solid;
   margin: 2.5px;
@@ -70,4 +69,17 @@
   font-family: $header-font;
   font-size: 40px;
   color: $white;
+}
+
+@mixin icon-span {
+  border: $black-border;
+  border-radius: 5px;
+  height: 30px;
+  width: 30px;
+
+}
+
+@mixin icon{
+  font-size: 30px;
+  color: $button-fill;
 }

@@ -119,10 +119,10 @@
     "prod": "browserify ./web/dist/index.js -g [ envify --NODE_ENV production ] -g [ uglifyify ] -t [ babelify --presets [ es2015 react babel-preset-stage-0 ] --plugins [ babel-plugin-transform-decorators-legacy ] ] | uglifyjs --compress --mangle > ./web/public/bundle.js",
     "sass": "sass --watch web/src/main.scss:web/public/main.css",
     "server": "supervisor ./server/bin/www",
-    "start": "npm run tsc & npm run sass & npm run web & npm run server",
+    "start": "npm run tsc && npm run sass & npm run web & npm run server",
     "test": "jest --color --verbose --expand --watchAll",
-    "tsc": "tsc --watch",
-    "web": "watchify -t [ babelify --presets [ es2015 react babel-preset-stage-0 ] --plugins [ babel-plugin-transform-decorators-legacy ] ] web/dist/index.js -o web/public/bundle.js -v"
+    "tsc": "tsc --watch --sourceMap",
+    "web": "watchify --debug -t [ babelify --presets [ es2015 react babel-preset-stage-0 ] --plugins [ babel-plugin-transform-decorators-legacy] ] web/dist/index.js -o web/public/bundle.js -v"
   },
   "version": "0.0.0",
   "private": true,

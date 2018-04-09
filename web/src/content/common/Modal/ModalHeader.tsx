@@ -2,10 +2,10 @@ import * as React from 'react'
 import HeadingComponent from '../HeadingComponent/HeadingComponent'
 import IconComponent from '../IconComponent/IconComponent'
 
-interface ModalHeaderTypes {
+export interface ModalHeaderTypes {
     title: string;
     showCloseButton?: boolean;
-    toggleModal: (string) => (MouseEvent) => void;
+    closeModal: (MouseEvent) => void;
 }
 
 const ModalHeader = (props: ModalHeaderTypes) => {
@@ -13,7 +13,7 @@ const ModalHeader = (props: ModalHeaderTypes) => {
         <div id="modal-header-container">
             <HeadingComponent heading={props.title} additionalClasses="modal-heading"/>
             {props.showCloseButton && 
-                <IconComponent id="close-button" faIcon="window-close" onClick={props.toggleModal('hidden')}/>
+                <IconComponent id="close-button" faIcon="times" onClick={props.closeModal}/>
             }
 
         </div>

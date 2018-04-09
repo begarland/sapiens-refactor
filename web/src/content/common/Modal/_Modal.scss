@@ -1,11 +1,51 @@
 #modal {
-
-  background-color: $teal;
+  height: 50vh;
+  width: 30vw;
+  min-width: 350px;
+  background-color: $white;
+  border: $black-border;
+  border-radius: $border-radius;
   position: absolute;
   left: 5%;
-  top: calc(5% + #{$header-height});
-  right: 5%;
-  bottom: 5%;
-
+  top: 20vh;
   z-index: $invisible-div-index + 1;
+
+  #modal-header-container {
+    background-color: $gray;
+    border-bottom: $black-border;
+    .modal-heading {
+      text-align: left;
+      font-size: 22px;
+      color: $white;
+      padding-left: 2px;
+    }
+
+    #close-button-span {
+      @include icon-span;
+      width: 21px;
+      height: 20px;
+      position: absolute;
+      top: 2px;
+      right: 2px;
+      background-color: $green;
+
+      #close-button {
+        @include icon;
+        font-size: 16px;
+        color: $white;
+      }
+    }
+  }
+
+  #modal-content-container {
+
+  }
+
+  #modal-buttons-container {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    width: 100%;
+  }
+
 }

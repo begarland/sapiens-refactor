@@ -26,6 +26,6 @@ export const toggleUserActions = () => (dispatch, getState) => {
 
 export const toggleModal = (modalSelection: string) => (dispatch, getState) => {
     const currentModalStatus = getState().appState.showModal
-    dispatch({type: TOGGLE_MODAL, show: !currentModalStatus})
+    dispatch({type: TOGGLE_MODAL, show: !currentModalStatus, modalSelection})
 }
 

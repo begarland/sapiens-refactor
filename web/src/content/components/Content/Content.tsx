@@ -5,6 +5,7 @@ import ActionsConsole from './ActionsConsole/ActionsConsole'
 import {AppTypes} from '../../App'
 import UserActions from './UserActions/UserActions'
 import Modal from '../../common/Modal/Modal'
+import ModalCollection from './ModalCollection/ModalCollection'
 
 interface ContentTypes extends AppTypes {}
 
@@ -40,7 +41,7 @@ const Content = (props: ContentTypes) => {
                 </Switch>
             </div>
             <UserActions {...props} />
-            {props.appState.showModal && <Modal />}
+            {props.appState.showModal && <ModalCollection {...props}/>}
         </div>
     )
 }

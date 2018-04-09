@@ -5,6 +5,9 @@ $portrait-tablet-to-landscape-and-desktop-min-width: 768px;
 $portrait-tablet-to-landscape-and-desktop-max-width: 979px;
 $large-desktop-min-width: 1200px;
 
+/* safari browser fix media query */
+$safari-browser-height: 625px;
+
 /* color blind safe color palette - see: https://personal.sron.nl/~pault/ */
 $gray: #777777;
 $red: #EE3333;
