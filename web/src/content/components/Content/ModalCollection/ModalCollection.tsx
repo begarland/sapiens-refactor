@@ -1,11 +1,11 @@
 import * as React from 'react'
-import {AppTypes} from '../../../App'
 import Modal from '../../../common/Modal/Modal'
 import HeadingComponent from '../../../common/HeadingComponent/HeadingComponent'
-import {ButtonComponentTypes} from '../../../common/ButtonComponent/ButtonComponent'
-import {ModalHeaderTypes} from '../../../common/Modal/ModalHeader'
-import {ModalButtonsTypes} from '../../../common/Modal/ModalButtons'
 import MxModalContent from './Collections/MxModalContent'
+import { AppTypes } from '../../../App'
+import { ButtonComponentTypes } from '../../../common/ButtonComponent/ButtonComponent'
+import { ModalHeaderTypes } from '../../../common/Modal/ModalHeader'
+import { ModalButtonsTypes } from '../../../common/Modal/ModalButtons'
 
 interface ModalCollectionTypes extends AppTypes {}
 

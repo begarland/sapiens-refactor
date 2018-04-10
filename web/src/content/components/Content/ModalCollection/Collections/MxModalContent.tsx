@@ -2,7 +2,7 @@ import * as React from 'react'
 import AdjustableSliderArrayCreator from '../../../../common/AdjustableSlider/AdjustableSliderArrayDisplay'
 import { AppTypes } from '../../../../App'
 import { AdjustableSliderTypes } from '../../../../common/AdjustableSlider/AdjustableSlider'
-import { Mx, Units, Calories, Hydration, UI } from '../../../../utils/Enums'
+import { Mx, Units, Calories, Hydration } from '../../../../utils/Enums'
 
 interface MxModalContentTypes extends AppTypes {}
 
