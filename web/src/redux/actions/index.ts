@@ -36,7 +36,7 @@ export const toggleModal = (modalSelection: string) => (dispatch, getState) => {
 }
 
 export const handleDrag = (mxType: string, selection: string, ui: {x: number}) => (dispatch, getState) => {
-    const metric = getState().userState.metric
+    const metric = getState().memberState.metric
     let deltaValue
     if (mxType === `${Mx.Calories}`){
         deltaValue = Math.round((ui.x * Calories.MaxSlideAdjust) / UI.ProgressBarWidth)

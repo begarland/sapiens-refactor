@@ -5,12 +5,12 @@ import Content from './components/Content/Content'
 import InvisibleFullScreen from './common/InvisibleFullScreen/InvisibleFullScreen'
 import { AppStateTypes } from '../redux/store/templates/appState'
 import { DailyStateTypes } from '../redux/store/templates/dailyState'
-import { UserStateTypes } from '../redux/store/templates/userState'
+import { MemberStateTypes } from '../redux/store/templates/memberState'
 
 export interface AppTypes {
     appState: AppStateTypes;
     dailyState: DailyStateTypes;
-    userState: UserStateTypes;
+    memberState: MemberStateTypes;
     navigateToNutrition: (MouseEvent) => void;
     navigateToActions: (MouseEvent) => void;
     navigateToNestedAction: (MouseEvent) => void;

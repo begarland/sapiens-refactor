@@ -12,7 +12,7 @@ export const appState: AppStateTypes = {
     showUserActions: false,
     userActionsDrawerClass: '',
     showModal: true,
-    modalSelection: 'calories',
+    modalSelection: 'sign-out',
     adjustableSlider: {
         calories: {
             consumed: 0,

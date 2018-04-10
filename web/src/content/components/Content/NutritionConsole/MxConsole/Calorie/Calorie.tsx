@@ -13,7 +13,7 @@ interface CalorieConsoleTypes extends AppTypes {
 const CalorieConsole = (props: CalorieConsoleTypes) => {
 
     const calories = props.dailyState.calories
-    const units =  (props.userState.metric ?   Units.CaloriesMetric : Units.CaloriesImperial)
+    const units =  (props.memberState.metric ?   Units.CaloriesMetric : Units.CaloriesImperial)
 
     const CalorieBarColors: BarColorsTypes = {
         barFillColor: `${Calories.BarFillColor}`,

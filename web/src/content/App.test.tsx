@@ -7,7 +7,7 @@ import {shallow, mount, render} from 'enzyme'
 import App from './App'
 import {appState} from '../redux/store/templates/appState'
 import {dailyState} from '../redux/store/templates/dailyState'
-import {userState} from '../redux/store/templates/userState'
+import {memberState} from '../redux/store/templates/memberState'
 
 Enzyme.configure({adapter: new Adapter()})
 
@@ -27,7 +27,7 @@ describe('<App/>', () => {
         <App
             appState={appState}
             dailyState={dailyState}
-            userState={userState}
+            memberState={memberState}
             navigateToNutrition={navigateToNutritionFunction}
             navigateToActions={navigateToActionsFunction}
             navigateToNestedAction={navigateToNestedActionFunction}

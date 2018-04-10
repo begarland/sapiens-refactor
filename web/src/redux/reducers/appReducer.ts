@@ -16,8 +16,6 @@ export default (state: AppStateTypes = appState, action) => {
                 ...state,
                 activeFooterButton: ((action.payload.pathname).includes('/actions') ? 'actions' : 'nutrition'),
                 showActionsBackButton: showActionsBackButton(action.payload.pathname)
-
-
             }
         }
         case CHANGE_INPUT_VALUE: {

@@ -8,19 +8,19 @@ import {
 } from '../redux/actions/index'
 import { AppStateTypes } from '../redux/store/templates/appState'
 import { DailyStateTypes } from '../redux/store/templates/dailyState'
-import { UserStateTypes } from '../redux/store/templates/userState'
+import { MemberStateTypes } from '../redux/store/templates/memberState'
 
 interface mapStateToPropsTypes {
     appState: AppStateTypes;
     dailyState: DailyStateTypes;
-    userState: UserStateTypes;
+    memberState: MemberStateTypes;
 }
 
 const mapStateToProps = (state: mapStateToPropsTypes, ownProps) =>  {
     return {
         appState: state.appState,
         dailyState: state.dailyState,
-        userState: state.userState,
+        memberState: state.memberState,
     }
 }
 

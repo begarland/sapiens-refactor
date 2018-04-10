@@ -15,7 +15,7 @@ interface HydrationConsoleTypes extends AppTypes {
 const HydrationConsole = (props: HydrationConsoleTypes) => {
 
     const hydration = props.dailyState.hydration
-    const units = (props.userState.metric ? Units.HydrationMetric : Units.HydrationImperial)
+    const units = (props.memberState.metric ? Units.HydrationMetric : Units.HydrationImperial)
 
     const HydrationBarColors: BarColorsTypes = {
         barFillColor: `${Hydration.BarFillColor}`,

@@ -1,6 +1,6 @@
-import {userState, UserStateTypes} from '../store/templates/userState'
+import {memberState, MemberStateTypes} from '../store/templates/memberState'
 
-export default (state: UserStateTypes = userState, action) => {
+export default (state: MemberStateTypes = memberState, action) => {
     switch (action.type) {
         case 'some-cases': {
             return {
