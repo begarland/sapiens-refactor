@@ -18,6 +18,7 @@ export interface AppTypes {
     navigateTo: (string) => (MouseEvent) => void;
     toggleUserActions: (MouseEvent) => void;
     toggleModal: (string) => (MouseEvent) => void;
+    handleDrag: (mxType: string, selection: string) => (MouseEvent, Object) => void;
 
 }
 

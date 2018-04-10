@@ -61,9 +61,6 @@ const AdjustableSlider = (props: AdjustableSliderTypes) => {
         </div>
         )
 
-
-
-
     return (
         <div className="slider-container">
             <h4 id={props.id + '-label'} className="slider-label">{props.label}:</h4>

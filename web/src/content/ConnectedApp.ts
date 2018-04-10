@@ -2,7 +2,10 @@ import { connect } from 'react-redux'
 import { withRouter } from 'react-router-dom'
 import { push } from 'react-router-redux'
 import App from './App'
-import {changeInputValue, switchButtonSelected, toggleModal, toggleUserActions} from '../redux/actions/index'
+import {
+    changeInputValue, handleDrag, switchButtonSelected, toggleModal,
+    toggleUserActions
+} from '../redux/actions/index'
 import { AppStateTypes } from '../redux/store/templates/appState'
 import { DailyStateTypes } from '../redux/store/templates/dailyState'
 import { UserStateTypes } from '../redux/store/templates/userState'
@@ -66,6 +69,9 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         toggleModal: (modalSelection: string) => (event: MouseEvent) => {
             dispatch(toggleModal(modalSelection))
         },
+        handleDrag: (mxType: string, selection: string) => (event: MouseEvent, ui: {x: number}) =>  {
+            dispatch(handleDrag(mxType, selection, ui))
+        }
     }
 }
 

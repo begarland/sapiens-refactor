@@ -20,6 +20,7 @@ describe('<App/>', () => {
     const navigateToFunction = sinon.spy()
     const toggleUserActionsFunction = sinon.spy()
     const toggleModalFunction = sinon.spy()
+    const handleDragFunction = sinon.spy()
 
 
     const AppAllProps = (
@@ -34,6 +35,7 @@ describe('<App/>', () => {
             navigateTo={navigateToFunction}
             toggleUserActions={toggleUserActionsFunction}
             toggleModal={toggleModalFunction}
+            handleDrag={handleDragFunction}
 
         />)
 
