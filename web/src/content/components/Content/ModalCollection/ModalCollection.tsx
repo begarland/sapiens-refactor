@@ -5,6 +5,7 @@ import HeadingComponent from '../../../common/HeadingComponent/HeadingComponent'
 import {ButtonComponentTypes} from '../../../common/ButtonComponent/ButtonComponent'
 import {ModalHeaderTypes} from '../../../common/Modal/ModalHeader'
 import {ModalButtonsTypes} from '../../../common/Modal/ModalButtons'
+import MxModalContent from './Collections/MxModalContent'
 
 interface ModalCollectionTypes extends AppTypes {}
 
@@ -23,7 +24,7 @@ const ModalCollection = (props: ModalCollectionTypes) => {
     if (modalSelection === 'calories' || modalSelection === 'hydration'){
         modalHeader = {title: modalSelection, showCloseButton: true, closeModal: props.toggleModal('none')}
         ModalContent = (
-            <HeadingComponent heading={modalSelection} />
+           <MxModalContent {...props}/>
         )
         modalButtons = {buttonArray: UpdateAndCloseButtons}
     } else {

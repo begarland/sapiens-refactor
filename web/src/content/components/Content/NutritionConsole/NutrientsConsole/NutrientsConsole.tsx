@@ -1,7 +1,7 @@
 import * as React from 'react'
 import HeadingComponent from '../../../../common/HeadingComponent/HeadingComponent'
 import {MiniProgressBarArrayDisplay} from '../../../../common/ProgressBar/MiniProgressBar/MiniProgressBarArrayDisplay'
-import {AppTypes} from '../../../../App'
+import { AppTypes } from '../../../../App'
 
 interface NutrientsConsoleTypes extends AppTypes {
 

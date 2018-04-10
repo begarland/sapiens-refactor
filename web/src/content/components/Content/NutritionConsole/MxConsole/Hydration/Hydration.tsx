@@ -1,9 +1,10 @@
 import * as React from 'react'
-import {LabelDataDisplayTypes} from '../../../../../common/LabelDataDisplay/LabelDataDisplay'
 import MxConsole from '../MxConsole'
-import {AppTypes} from '../../../../../App'
-import {BarColorsTypes} from '../../../MiscellaneousInterfaces'
-import {ProgressBarFillTypes} from '../../../../../../redux/store/templates/dailyState'
+import { AppTypes } from '../../../../../App'
+import { LabelDataDisplayTypes } from '../../../../../common/LabelDataDisplay/LabelDataDisplay'
+import { BarColorsTypes } from '../../../../../utils/MiscellaneousInterfaces'
+import { ProgressBarFillTypes } from '../../../../../../redux/store/templates/dailyState'
+import { Hydration, Units, Mx } from '../../../../../utils/Enums'
 
 
 
@@ -14,12 +15,12 @@ interface HydrationConsoleTypes extends AppTypes {
 const HydrationConsole = (props: HydrationConsoleTypes) => {
 
     const hydration = props.dailyState.hydration
-    const units = (props.userState.metric ? 'L' : 'oz')
+    const units = (props.userState.metric ? Units.HydrationMetric : Units.HydrationImperial)
 
     const HydrationBarColors: BarColorsTypes = {
-        barFillColor: '#2166AC',
-        barInnerFillColor: '#328DC1',
-        barTotalFillColor: '#92C5DE',
+        barFillColor: `${Hydration.BarFillColor}`,
+        barInnerFillColor: `${Hydration.BarInnerFillColor}`,
+        barTotalFillColor: `${Hydration.BarTotalFillColor}`,
     }
 
     const HydrationBarFills: ProgressBarFillTypes = {
@@ -34,10 +35,10 @@ const HydrationConsole = (props: HydrationConsoleTypes) => {
     }
 
     const HydrationLabelData: LabelDataDisplayTypes[] = [
-        {label: 'hydrated', data: props.dailyState.hydration.hydrated},
-        {label: 'dehyrated', data: props.dailyState.hydration.dehydrated},
-        {label: 'base hydration', data: props.dailyState.hydration.baseHydration},
-        {label: 'target', data: props.dailyState.hydration.targetHydration},
+        {label: `${Hydration.Hydrated}`, data: props.dailyState.hydration.hydrated},
+        {label: `${Hydration.Dehydrated}`, data: props.dailyState.hydration.dehydrated},
+        {label: `${Hydration.BaseHydration}`, data: props.dailyState.hydration.baseHydration},
+        {label: `${Hydration.Target}`, data: props.dailyState.hydration.targetHydration},
     ]
 
     HydrationLabelData.map(HydrationLabel => {
@@ -47,11 +48,11 @@ const HydrationConsole = (props: HydrationConsoleTypes) => {
     return (
         <div id="hydration-console-root">
             <MxConsole
-                heading="hydration"
+                heading={Mx.Hydration}
                 labelDataArray={HydrationLabelData}
                 barColors={HydrationBarColors}
                 barFills={HydrationBarFills}
-                onClick={props.toggleModal('hydration')}
+                onClick={props.toggleModal(Mx.Hydration)}
 
             />
 

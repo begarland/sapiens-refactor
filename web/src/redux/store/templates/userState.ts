@@ -1,5 +1,5 @@
 export const userState: UserStateTypes = {
-    metric: false,
+    metric: true,
 }
 
 export interface UserStateTypes {
