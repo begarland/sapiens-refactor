@@ -2,6 +2,7 @@ import {
     CHANGE_INPUT_VALUE, HANDLE_DRAG, SIGN_IN, SIGN_OUT,
     SWITCH_BUTTON, TOGGLE_MODAL,
     TOGGLE_USER_ACTIONS, ZERO_OUT_SLIDERS,
+    FORGOT_PASSWORD
 } from './actionTypes'
 import { Mx, Hydration, UI, Calories, } from '../../content/utils/Enums'
 import {push} from 'react-router-redux'
@@ -79,4 +80,8 @@ export const signOut = () => {
 
 export const signIn = () => {
     return ({type: SIGN_IN})
+}
+
+export const forgotPassword = () => {
+    return ({type: FORGOT_PASSWORD})
 }

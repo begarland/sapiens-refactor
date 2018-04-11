@@ -4,7 +4,7 @@ import { push } from 'react-router-redux'
 import App from './App'
 import {
     changeInputValue, handleDrag, navigateTo, signIn, signOut, switchButtonSelected, toggleModal,
-    toggleUserActions
+    toggleUserActions, forgotPassword,
 } from '../redux/actions/index'
 import { AppStateTypes } from '../redux/store/templates/appState'
 import { DailyStateTypes } from '../redux/store/templates/dailyState'
@@ -75,8 +75,11 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         signOut: () => {
             dispatch(signOut())
         },
-        signIn: (email: string, password: string) => {
+        signIn: () => {
             dispatch(signIn())
+        },
+        forgotPassword: () => {
+            dispatch(forgotPassword())
         }
     }
 }

@@ -22,7 +22,7 @@ export interface AppTypes {
     inputChange: (inputType: string) => (id: string, value: string | boolean) => void;
     signIn: () => void;
     signOut: () => void;
-
+    forgotPassword: () => void;
 
 }
 

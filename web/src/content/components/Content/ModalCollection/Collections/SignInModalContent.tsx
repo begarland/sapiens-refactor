@@ -14,7 +14,7 @@ const SignInModalContent = (props: SignInModalContentTypes) => {
     ]
 
     return (
-        <div id="sign-in-modal-content">
+        <div id="sign-in-modal-content" className="modal-content">
             <InputGenerator inputArray={inputArray} onInputChange={props.inputChange('signIn')}/>
         </div>
     )

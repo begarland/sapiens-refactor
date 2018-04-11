@@ -1,8 +1,7 @@
+import {FooterButtons} from '../../../content/utils/Enums'
+
 export const appState: AppStateTypes = {
-    signedIn: false,
-    signInProps: {
-        showSpinner: false,
-    },
+    signedIn: true,
     showNavigateButton: true,
     moveBox: false,
     spinLogo: true,
@@ -11,14 +10,18 @@ export const appState: AppStateTypes = {
             email: '',
             password: '',
             showPassword: false,
+        },
+        forgotPassword: {
+            email: '',
+            emailExistsInDB: false,
         }
     },
-    activeFooterButton: 'nutrition',
+    activeFooterButton: FooterButtons.Nutrition,
     showActionsBackButton: false,
     showUserActions: false,
     userActionsDrawerClass: '',
-    showModal: false,
-    modalSelection: 'none',
+    showModal: true,
+    modalSelection: 'forgot-password',
     adjustableSlider: {
         calories: {
             consumed: 0,
@@ -28,12 +31,15 @@ export const appState: AppStateTypes = {
             hydrated: 0,
             dehydrated: 0,
         }
+    },
+    spinners: {
+        signIn: false,
+        forgotPassword: false,
     }
 }
 
 export interface AppStateTypes {
     signedIn: boolean;
-    signInProps: SignInPropTypes;
     showNavigateButton: boolean;
     moveBox: boolean;
     spinLogo: boolean;
@@ -45,6 +51,7 @@ export interface AppStateTypes {
     showModal: boolean;
     modalSelection: string;
     adjustableSlider: AdjustableSliderTypes;
+    spinners: SpinnerTypes;
 }
 
 export interface InputTypes {
@@ -52,13 +59,20 @@ export interface InputTypes {
         email: string;
         password: string;
         showPassword: boolean;
+    },
+    forgotPassword: {
+        email: string;
+        emailExistsInDB: null | boolean;
     }
 }
 export interface AdjustableSliderTypes {
-    calories: { consumed: number; burned: number; };
+    calories: {consumed: number; burned: number;};
     hydration: {hydrated: number; dehydrated: number;};
 }
 
-export interface SignInPropTypes {
-    showSpinner: boolean;
+export interface SpinnerTypes {
+    signIn: boolean;
+    forgotPassword: boolean;
+
 }
+

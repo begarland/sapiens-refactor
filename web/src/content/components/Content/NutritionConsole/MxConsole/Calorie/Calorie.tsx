@@ -4,7 +4,7 @@ import { LabelDataDisplayTypes } from '../../../../../common/LabelDataDisplay/La
 import { AppTypes } from '../../../../../App'
 import { ProgressBarFillTypes } from '../../../../../../redux/store/templates/dailyState'
 import { BarColorsTypes } from '../../../../../utils/MiscellaneousInterfaces'
-import { Calories, Units, Mx } from '../../../../../utils/Enums'
+import {Calories, Units, Mx, Modals} from '../../../../../utils/Enums'
 
 interface CalorieConsoleTypes extends AppTypes {
 
@@ -50,7 +50,7 @@ const CalorieConsole = (props: CalorieConsoleTypes) => {
                labelDataArray={CalorieLabelData}
                barColors={CalorieBarColors}
                barFills={CalorieBarFills}
-               onClick={props.toggleModal(Mx.Calories)}
+               onClick={props.toggleModal(Modals.Calories)}
            />
         </div>
     )

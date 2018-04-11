@@ -4,7 +4,7 @@ import { AppTypes } from '../../../../../App'
 import { LabelDataDisplayTypes } from '../../../../../common/LabelDataDisplay/LabelDataDisplay'
 import { BarColorsTypes } from '../../../../../utils/MiscellaneousInterfaces'
 import { ProgressBarFillTypes } from '../../../../../../redux/store/templates/dailyState'
-import { Hydration, Units, Mx } from '../../../../../utils/Enums'
+import { Hydration, Units, Mx, Modals } from '../../../../../utils/Enums'
 
 
 
@@ -52,8 +52,7 @@ const HydrationConsole = (props: HydrationConsoleTypes) => {
                 labelDataArray={HydrationLabelData}
                 barColors={HydrationBarColors}
                 barFills={HydrationBarFills}
-                onClick={props.toggleModal(Mx.Hydration)}
-
+                onClick={props.toggleModal(Modals.Hydration)}
             />
 
         </div>

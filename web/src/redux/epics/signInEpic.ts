@@ -3,13 +3,11 @@ import { ofType } from 'redux-observable'
 import { switchMap } from 'rxjs/operators'
 import {SIGN_IN, SIGN_IN_SUCCESSFUL, SIGN_IN_FAILED} from '../actions/actionTypes'
 
-
-
 const signInEpic = (action$, store) =>
     action$.pipe(
         ofType(SIGN_IN),
         switchMap(() =>
-            axios.post('/members/',
+            axios.post('/members',
                 {
                         email: store.getState().appState.inputs.signIn.email,
                         password: store.getState().appState.inputs.signIn.password
@@ -18,9 +16,9 @@ const signInEpic = (action$, store) =>
                     return ({type: SIGN_IN_SUCCESSFUL, member: response.data.id})
                 })
                 .catch((error) => {
-                    console.error(error)
+                    console.error(error.message)
 
-                    return ({type: SIGN_IN_FAILED})
+                    return ({type: SIGN_IN_FAILED, error: error.message})
 
                 })
         ))

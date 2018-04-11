@@ -3,13 +3,11 @@ export enum Units {
     CaloriesImperial = 'cals',
     HydrationMetric = 'L',
     HydrationImperial = 'oz'
-
 }
 
 export enum Mx {
     Calories = 'calories',
     Hydration = 'hydration',
-
 }
 
 export enum Calories {
@@ -21,7 +19,6 @@ export enum Calories {
     BarFillColor = '#1B7837',
     BarInnerFillColor = '#5AAE61',
     BarTotalFillColor = '#CAE9AB',
-
 }
 
 export enum Hydration {
@@ -39,4 +36,27 @@ export enum Hydration {
 export enum UI {
     SliderBarWidth = 300,
     ProgressBarWidth = 300,
+}
+
+export enum FooterButtons {
+    Nutrition = 'nutrition',
+    Actions = 'actions'
+}
+
+export enum Modals {
+    None = 'none',
+    SignInOrRegister = 'sign-in-or-register',
+    SignIn = 'sign-in',
+    ForgotPassword = 'forgot-password',
+    Register = 'register',
+    SignOut = 'sign-out',
+    WeighIn = 'weigh-in',
+    Calories = 'calories',
+    Hydration = 'hydration',
+    Error = 'error',
+}
+
+export enum Spinners {
+    SignIn = 'sign-in',
+    ForgotPassword = 'forgot-password'
 }
