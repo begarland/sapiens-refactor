@@ -10,7 +10,7 @@ const InvisibleFullScreen = (props: InvisibleFullScreenTypes) => {
     if (props.appState.showUserActions){
         onClick = props.toggleUserActions
     } else if (props.appState.showModal){
-        onClick = props.toggleModal('hidden')
+        onClick = props.toggleModal('none')
     } else {
         onClick = () => console.error('this should not be visible')
     }

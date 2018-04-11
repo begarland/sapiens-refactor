@@ -1,6 +1,7 @@
 import * as React from 'react'
 import Select from './Inputs/Select'
 import Input from './Inputs/Input'
+import Checkbox from './Inputs/Checkbox'
 
 export interface SingleInputTypes {
     id: string;
@@ -16,7 +17,7 @@ export interface SingleInputTypes {
 
 export interface InputGeneratorTypes {
     inputArray: SingleInputTypes[];
-    onInputChange: (string, Event) => string;
+    onInputChange: (id: string, value: string | boolean) => void;
 }
 
 
@@ -28,6 +29,10 @@ const InputGenerator = (props: InputGeneratorTypes) => {
                 if (input.inputType === 'select'){
                     return (
                         <Select {...input} key={index} onInputChange={props.onInputChange}/>
+                    )
+                } else if (input.inputType === 'checkbox'){
+                    return (
+                        <Checkbox {...input} key={index} onInputChange={props.onInputChange}/>
                     )
                 }
                 return (

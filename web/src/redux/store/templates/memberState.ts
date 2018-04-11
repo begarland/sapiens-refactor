@@ -1,5 +1,5 @@
 export const memberState: MemberStateTypes = {
-    metric: true,
+    metric: false,
 }
 
 export interface MemberStateTypes {

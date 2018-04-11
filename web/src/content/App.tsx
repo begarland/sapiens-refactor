@@ -19,12 +19,17 @@ export interface AppTypes {
     toggleUserActions: (MouseEvent) => void;
     toggleModal: (string) => (MouseEvent) => void;
     handleDrag: (mxType: string, selection: string) => (MouseEvent, Object) => void;
+    inputChange: (inputType: string) => (id: string, value: string | boolean) => void;
+    signIn: () => void;
+    signOut: () => void;
+
 
 }
 
 const App = (props: AppTypes) => {
+    const test = ()=> {return null}
     return (
-        <div className="App">
+        <div className="App" onClick={test}>
             <Header {...props} />
             <InvisibleFullScreen {...props} />
             <Content {...props} />

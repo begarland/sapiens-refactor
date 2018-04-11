@@ -21,7 +21,6 @@
 @mixin button {
   margin-top: auto;
   text-align: center;
-  vertical-align: center;
   color: white;
   background-color: $button-fill;
   border-radius: $border-radius;
@@ -40,7 +39,7 @@
   font-family: $regular-font;
   border-radius: $border-radius;
   width: 150px;
-  height: 15px;
+  height: 25px;
 }
 
 @mixin label{

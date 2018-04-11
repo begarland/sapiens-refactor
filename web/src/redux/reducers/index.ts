@@ -6,6 +6,7 @@ import dailyState from './dailyStateReducer'
 import memberState from './memberReducer'
 
 import simpleEpic from '../../content/sample/simpleEpic'
+import signInEpic from '../epics/signInEpic'
 
 export const rootReducer =  combineReducers({
     router: routerReducer,
@@ -17,4 +18,6 @@ export const rootReducer =  combineReducers({
 
 export const rootEpic = combineEpics (
     simpleEpic,
+    signInEpic,
+
 )

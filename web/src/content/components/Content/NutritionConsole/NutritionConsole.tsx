@@ -10,8 +10,11 @@ interface NutritionConsoleTypes extends AppTypes {
 }
 
 const NutritionConsole = (props: NutritionConsoleTypes) => {
+    const doNothing = () => {return null}
+    const preventInteraction = () => props.toggleModal('sign-in-or-register')
+    const nutritionOnClick = (props.appState.signedIn ? doNothing() : preventInteraction()  )
     return (
-        <div id="nutrition-console-root">
+        <div id="nutrition-console-root" onClick={nutritionOnClick}>
             <CalorieConsole {...props}/>
             <HydrationConsole {...props}/>
             <NutrientsConsole {...props}/>

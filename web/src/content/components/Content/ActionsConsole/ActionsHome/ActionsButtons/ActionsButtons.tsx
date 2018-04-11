@@ -19,9 +19,13 @@ const ActionsButtons = (props: ActionsButtonsTypes) => {
         {id: 'history', label: 'History', onClick: props.navigateTo('history')},
         {id: 'goals', label: 'Goals and Progress', onClick: props.navigateTo('goals')},
     ]
+    const doNothing = () => {return null}
+    const preventInteraction = () => props.toggleModal('sign-in-or-register')
+    const actionsOnClick = (props.appState.signedIn ? doNothing() : preventInteraction()  )
+
 
     return (
-        <div id="actions-buttons-container">
+        <div id="actions-buttons-container" onClick={actionsOnClick}>
             <div id="mobile-and-portrait-tablet-actions-buttons">
                 {mobileButtonsArray.map((button, index) =>
                     <ButtonComponent key={index} id={button.id} onClick={button.onClick} label={button.label}/>

@@ -2,7 +2,8 @@ import { appState, AppStateTypes } from '../store/templates/appState'
 
 import { LOCATION_CHANGE } from 'react-router-redux'
 import {
-    CHANGE_INPUT_VALUE, HANDLE_DRAG, SWITCH_BUTTON, TOGGLE_MODAL, TOGGLE_USER_ACTIONS,
+    CHANGE_INPUT_VALUE, HANDLE_DRAG, SIGN_IN, SIGN_IN_FAILED, SIGN_IN_SUCCESSFUL, SIGN_OUT, SWITCH_BUTTON, TOGGLE_MODAL,
+    TOGGLE_USER_ACTIONS,
     ZERO_OUT_SLIDERS
 } from '../actions/actionTypes'
 
@@ -23,7 +24,10 @@ export default (state: AppStateTypes = appState, action) => {
                 ...state,
                 inputs: {
                     ...state.inputs,
-                    [action.key]: action.value,
+                    [action.inputType]: {
+                        ...state.inputs[action.inputType],
+                        [action.key]: action.value,
+                    }
                 }
             }
         }
@@ -47,6 +51,7 @@ export default (state: AppStateTypes = appState, action) => {
                 modalSelection: action.modalSelection,
                 showUserActions: false,
                 userActionsDrawerClass: (state.showUserActions ? 'slide-out' : ''),
+                inputs: appState.inputs,
             }
         }
         case HANDLE_DRAG: {
@@ -65,6 +70,26 @@ export default (state: AppStateTypes = appState, action) => {
             return {
                 ...state,
                 adjustableSlider: appState.adjustableSlider
+            }
+        }
+        case SIGN_OUT: {
+            return {
+                ...state,
+                signedIn: false,
+            }
+        }
+        case SIGN_IN_SUCCESSFUL: {
+            return {
+                ...state,
+                signedIn: true,
+                inputs: appState.inputs,
+
+            }
+        }
+        case SIGN_IN_FAILED: {
+            return {
+                ...state,
+                inputs: appState.inputs,
             }
         }
         default: {

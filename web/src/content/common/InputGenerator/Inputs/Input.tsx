@@ -3,7 +3,7 @@ import LabelComponent from '../../LabelComponent/LabelComponent'
 import { SingleInputTypes } from '../InputGenerator'
 
 interface InputTypes extends SingleInputTypes {
-    onInputChange: (string, Event) => string;
+    onInputChange: (id: string, value: string) => void;
 }
 
 const Input = (props: InputTypes) => {

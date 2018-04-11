@@ -1,18 +1,24 @@
 export const appState: AppStateTypes = {
+    signedIn: false,
+    signInProps: {
+        showSpinner: false,
+    },
     showNavigateButton: true,
     moveBox: false,
     spinLogo: true,
     inputs: {
-        name: '',
-        age: null,
-        favoriteColor: '',
+        signIn: {
+            email: '',
+            password: '',
+            showPassword: false,
+        }
     },
     activeFooterButton: 'nutrition',
     showActionsBackButton: false,
     showUserActions: false,
     userActionsDrawerClass: '',
-    showModal: true,
-    modalSelection: 'sign-out',
+    showModal: false,
+    modalSelection: 'none',
     adjustableSlider: {
         calories: {
             consumed: 0,
@@ -26,6 +32,8 @@ export const appState: AppStateTypes = {
 }
 
 export interface AppStateTypes {
+    signedIn: boolean;
+    signInProps: SignInPropTypes;
     showNavigateButton: boolean;
     moveBox: boolean;
     spinLogo: boolean;
@@ -40,11 +48,17 @@ export interface AppStateTypes {
 }
 
 export interface InputTypes {
-    name: string;
-    age: number;
-    favoriteColor: string;
+    signIn: {
+        email: string;
+        password: string;
+        showPassword: boolean;
+    }
 }
 export interface AdjustableSliderTypes {
     calories: { consumed: number; burned: number; };
     hydration: {hydrated: number; dehydrated: number;};
+}
+
+export interface SignInPropTypes {
+    showSpinner: boolean;
 }

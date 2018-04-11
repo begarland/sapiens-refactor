@@ -38,6 +38,7 @@
   },
   "bundleDependencies": false,
   "dependencies": {
+    "@types/axios": "^0.14.0",
     "axios": "0.17.0",
     "body-parser": "~1.18.2",
     "cookie-parser": "~1.4.3",
