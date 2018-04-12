@@ -1,4 +1,5 @@
 import {FooterButtons, Modals} from '../../../content/utils/Enums'
+import {isBoolean} from 'util'
 
 export const appState: AppStateTypes = {
     signedIn: true,
@@ -14,6 +15,9 @@ export const appState: AppStateTypes = {
         forgotPassword: {
             email: '',
             emailExistsInDB: null,
+        },
+        weighIn: {
+            weight: null,
         }
     },
     activeFooterButton: FooterButtons.Nutrition,
@@ -35,6 +39,7 @@ export const appState: AppStateTypes = {
     spinners: {
         signIn: false,
         forgotPassword: false,
+        weighIn: false,
     },
     error: '',
 }
@@ -65,7 +70,11 @@ export interface InputTypes {
     forgotPassword: {
         email: string;
         emailExistsInDB: null | boolean;
+    },
+    weighIn: {
+        weight: null | number;
     }
+
 }
 export interface AdjustableSliderTypes {
     calories: {consumed: number; burned: number;};
@@ -75,5 +84,6 @@ export interface AdjustableSliderTypes {
 export interface SpinnerTypes {
     signIn: boolean;
     forgotPassword: boolean;
+    weighIn: boolean;
 }
 

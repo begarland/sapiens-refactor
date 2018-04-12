@@ -12,6 +12,9 @@ export interface SingleInputTypes {
     additionalInputClasses?: string;
     selectOptions?: string[];
     data: any;
+    extraData?: string;
+    extraDataAdditionalClasses?: string;
+
 
 }
 

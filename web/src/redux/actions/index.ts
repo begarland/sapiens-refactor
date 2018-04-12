@@ -1,6 +1,6 @@
 import {
     CHANGE_INPUT_VALUE, HANDLE_DRAG, SIGN_IN, SIGN_OUT,
-    SWITCH_BUTTON, TOGGLE_MODAL,
+    SWITCH_BUTTON, TOGGLE_MODAL, WEIGH_IN,
     TOGGLE_USER_ACTIONS, ZERO_OUT_SLIDERS,
     FORGOT_PASSWORD
 } from './actionTypes'
@@ -84,4 +84,8 @@ export const signIn = () => {
 
 export const forgotPassword = () => {
     return ({type: FORGOT_PASSWORD})
+}
+
+export const weighIn = () => {
+    return ({type: WEIGH_IN})
 }

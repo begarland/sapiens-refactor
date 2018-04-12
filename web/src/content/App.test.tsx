@@ -25,6 +25,7 @@ describe('<App/>', () => {
     const signInFunction = sinon.spy()
     const signOutFunction = sinon.spy()
     const forgotPasswordFunction = sinon.spy()
+    const weighInFunction = sinon.spy()
 
 
     const AppAllProps = (
@@ -44,6 +45,7 @@ describe('<App/>', () => {
             signOut={signOutFunction}
             signIn={signInFunction}
             forgotPassword={forgotPasswordFunction}
+            weighIn={weighInFunction}
 
         />)
 

@@ -23,6 +23,7 @@ export interface AppTypes {
     signIn: () => void;
     signOut: () => void;
     forgotPassword: () => void;
+    weighIn: () => void;
 
 }
 

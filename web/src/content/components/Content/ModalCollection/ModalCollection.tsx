@@ -11,6 +11,7 @@ import { ButtonComponentTypes } from '../../../common/ButtonComponent/ButtonComp
 import { ModalHeaderTypes } from '../../../common/Modal/ModalHeader'
 import { ModalButtonsTypes } from '../../../common/Modal/ModalButtons'
 import { Modals } from '../../../utils/Enums'
+import WeighInModalContent from './Collections/WeighInModalContent'
 
 
 
@@ -52,6 +53,11 @@ const ModalCollection = (props: ModalCollectionTypes) => {
         cancelButton,
     ]
 
+    const WeighInSubmitAndCancelButtons: ButtonComponentTypes [] = [
+        {id: 'submit-button', label: 'Submit', onClick: props.weighIn},
+        cancelButton,
+    ]
+
     const CloseButton: ButtonComponentTypes [] = [closeButton]
 
     const OkayButton: ButtonComponentTypes [] = [okayButton]
@@ -66,7 +72,13 @@ const ModalCollection = (props: ModalCollectionTypes) => {
             <MxModalContent {...props}/>
         )
         modalButtons = {buttonArray: UpdateAndCloseButtons}
+
     } else if (modalSelection === Modals.WeighIn) {
+        modalHeader = {title: 'Weigh in', showCloseButton: true, closeModal: closeModal}
+        ModalContent = (
+            <WeighInModalContent {...props}/>
+        )
+        modalButtons = {buttonArray:  WeighInSubmitAndCancelButtons}
 
     } else if (modalSelection === Modals.SignOut) {
         modalHeader = {title: 'Sign out?', showCloseButton: true, closeModal: closeModal}
@@ -76,6 +88,7 @@ const ModalCollection = (props: ModalCollectionTypes) => {
             </div>
         )
         modalButtons = {buttonArray: SignOutAndStayButtons}
+
     } else if (modalSelection === Modals.SignInOrRegister){
         modalHeader = {title: 'Sign in or Register', showCloseButton: true, closeModal: closeModal}
         ModalContent = (
@@ -84,6 +97,7 @@ const ModalCollection = (props: ModalCollectionTypes) => {
             </div>
         )
         modalButtons = {buttonArray: SignInRegisterCancelButtons}
+
     } else if (modalSelection === Modals.SignIn){
         if (spinners.signIn){
             modalHeader = {title: 'Signing in...', showCloseButton: false,}
@@ -100,6 +114,7 @@ const ModalCollection = (props: ModalCollectionTypes) => {
             )
             modalButtons = {buttonArray: SignInForgotPasswordCancelButtons}
         }
+
     } else if (modalSelection === Modals.ForgotPassword) {
         modalHeader = {title: 'Forgot Password?', showCloseButton: true, closeModal: closeModal}
         if (props.appState.inputs.forgotPassword.emailExistsInDB === true) {
@@ -125,9 +140,6 @@ const ModalCollection = (props: ModalCollectionTypes) => {
             modalButtons = {buttonArray: ForgotPasswordSubmitAndCancelButtons}
         }
 
-
-    } else if (modalSelection === Modals.Register){
-
     } else if (modalSelection === Modals.Error) {
         modalHeader = {title: 'Error!!!', showCloseButton: true, closeModal: closeModal, additionalClasses: 'error-header'}
         ModalContent = (
@@ -138,6 +150,7 @@ const ModalCollection = (props: ModalCollectionTypes) => {
         )
         modalButtons = {buttonArray: OkayButton}
     }
+
     else {
         ModalContent = (
             <HeadingComponent heading="hello"/>

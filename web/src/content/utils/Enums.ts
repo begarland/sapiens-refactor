@@ -4,7 +4,9 @@ export enum Units {
     CaloriesMetric = 'kCals',
     CaloriesImperial = 'cals',
     HydrationMetric = 'L',
-    HydrationImperial = 'oz'
+    HydrationImperial = 'oz',
+    WeightMetric = 'kg',
+    WeightImperial = 'lbs',
 }
 
 export enum Mx {

@@ -4,7 +4,7 @@ import { LOCATION_CHANGE } from 'react-router-redux'
 import {
     CHANGE_INPUT_VALUE, HANDLE_DRAG, SIGN_IN, SIGN_IN_FAILED, SIGN_IN_SUCCESSFUL, SIGN_OUT, SWITCH_BUTTON, TOGGLE_MODAL,
     TOGGLE_USER_ACTIONS, FORGOT_PASSWORD, FORGOT_PASSWORD_FAILED, FORGOT_PASSWORD_SUCCESSFUL,
-    ZERO_OUT_SLIDERS
+    ZERO_OUT_SLIDERS, WEIGH_IN, WEIGH_IN_SUCCESSFUL, WEIGH_IN_FAILED
 } from '../actions/actionTypes'
 
 import {FooterButtons, Modals, Paths} from '../../content/utils/Enums'
@@ -143,6 +143,38 @@ export default (state: AppStateTypes = appState, action) => {
                 },
                 modalSelection: Modals.Error,
                 error: action.error
+            }
+        }
+        case WEIGH_IN: {
+            return {
+                ...state,
+                spinners: {
+                    ...state.spinners,
+                    weighIn: true,
+                },
+            }
+        }
+        case WEIGH_IN_SUCCESSFUL: {
+            return {
+                ...state,
+                inputs: appState.inputs,
+                spinners: {
+                    ...state.spinners,
+                    weighIn: false,
+                },
+            }
+        }
+        case WEIGH_IN_FAILED: {
+            return {
+                ...state,
+                inputs: appState.inputs,
+                spinners: {
+                    ...state.spinners,
+                    weighIn: false,
+                },
+                modalSelection: Modals.Error,
+                error: action.error
+
             }
         }
         default: {

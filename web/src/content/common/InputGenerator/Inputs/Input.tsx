@@ -17,6 +17,7 @@ const Input = (props: InputTypes) => {
                 value={props.data || ''}
                 onChange={(event) => {props.onInputChange(props.id, event.target.value)}}
             />
+            {props.extraData && <LabelComponent label={props.extraData} hideColon={true} additionalClasses={props.extraDataAdditionalClasses}/>}
         </div>
     )
 }
