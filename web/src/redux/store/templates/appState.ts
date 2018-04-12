@@ -1,4 +1,4 @@
-import {FooterButtons} from '../../../content/utils/Enums'
+import {FooterButtons, Modals} from '../../../content/utils/Enums'
 
 export const appState: AppStateTypes = {
     signedIn: true,
@@ -13,7 +13,7 @@ export const appState: AppStateTypes = {
         },
         forgotPassword: {
             email: '',
-            emailExistsInDB: false,
+            emailExistsInDB: null,
         }
     },
     activeFooterButton: FooterButtons.Nutrition,
@@ -21,7 +21,7 @@ export const appState: AppStateTypes = {
     showUserActions: false,
     userActionsDrawerClass: '',
     showModal: true,
-    modalSelection: 'forgot-password',
+    modalSelection: Modals.ForgotPassword,
     adjustableSlider: {
         calories: {
             consumed: 0,
@@ -33,9 +33,10 @@ export const appState: AppStateTypes = {
         }
     },
     spinners: {
-        signIn: false,
+        signIn: true,
         forgotPassword: false,
-    }
+    },
+    error: '',
 }
 
 export interface AppStateTypes {
@@ -52,6 +53,7 @@ export interface AppStateTypes {
     modalSelection: string;
     adjustableSlider: AdjustableSliderTypes;
     spinners: SpinnerTypes;
+    error: string;
 }
 
 export interface InputTypes {
@@ -73,6 +75,5 @@ export interface AdjustableSliderTypes {
 export interface SpinnerTypes {
     signIn: boolean;
     forgotPassword: boolean;
-
 }
 

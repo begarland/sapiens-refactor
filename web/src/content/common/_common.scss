@@ -79,3 +79,9 @@
   z-index: $invisible-div-index;
   -webkit-tap-highlight-color: rgba(0,0,0,0);
 }
+
+#spinner {
+  font-size: 20px;
+  margin: 10px 0 10px 0;
+  color: $gray;
+}

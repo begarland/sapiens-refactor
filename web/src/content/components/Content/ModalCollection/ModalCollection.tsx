@@ -20,10 +20,11 @@ const ModalCollection = (props: ModalCollectionTypes) => {
     const closeModal = props.toggleModal(Modals.None)
     const cancelButton =  {id: 'cancel-button', label: 'Cancel', onClick: closeModal}
     const closeButton =  {id: 'close-button', label: 'Close', onClick: closeModal}
+    const okayButton =  {id: 'okay-button', label: 'Okay', onClick: closeModal}
 
     const UpdateAndCloseButtons: ButtonComponentTypes [] = [
         {id: 'update-button', label: 'Update', onClick: () => console.log('update')}, //TODO: Implement update Function
-        {id: 'close-button', label: 'Close', onClick: closeModal},
+        closeButton,
     ]
 
     const SignOutAndStayButtons: ButtonComponentTypes [] = [
@@ -49,6 +50,8 @@ const ModalCollection = (props: ModalCollectionTypes) => {
     ]
 
     const CloseButton: ButtonComponentTypes [] = [closeButton]
+
+    const OkayButton: ButtonComponentTypes [] = [okayButton]
 
     let modalHeader: ModalHeaderTypes
     let ModalContent
@@ -103,7 +106,17 @@ const ModalCollection = (props: ModalCollectionTypes) => {
 
     } else if (modalSelection === Modals.Register){
 
-    } else {
+    } else if (modalSelection === Modals.Error) {
+        modalHeader = {title: 'Error!!!', showCloseButton: true, closeModal: closeModal, additionalClasses: 'error-header'}
+        ModalContent = (
+            <div id="error-modal-content" className="modal-content">
+                <LabelComponent additionalClasses="full-width-label" label="An error has occurred!" hideColon={true}/>
+                <LabelComponent additionalClasses="full-width-label" label={props.appState.error} hideColon={true}/>
+            </div>
+        )
+        modalButtons = {buttonArray: OkayButton}
+    }
+    else {
         ModalContent = (
             <HeadingComponent heading="hello"/>
         )

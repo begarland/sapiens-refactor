@@ -19,6 +19,7 @@
 }
 
 @mixin button {
+  height: 35px;
   margin-top: auto;
   text-align: center;
   color: white;
@@ -53,9 +54,6 @@
 @mixin progressBar-label{
   @include bold-font;
   text-align: center;
-  width: 150px;
-  margin-right: 5px;
-  display: inline-block;
 }
 
 @mixin bold-font {

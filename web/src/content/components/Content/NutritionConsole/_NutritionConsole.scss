@@ -22,6 +22,7 @@
   @media (max-width: $portrait-tablet-to-landscape-and-desktop-min-width){
     width: 100vw;
     border-right: none;
+    padding-bottom: 30px;
   }
 
   .mx-console{
@@ -35,6 +36,10 @@
       padding-bottom: $safari-bottom-pad + 20px;
     }
     padding-bottom: 20px;
+  }
+
+  #micronutrient-container {
+    padding-top: 10px;
   }
 
 }

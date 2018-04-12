@@ -4,6 +4,7 @@ interface IconComponentTypes {
     id: string;
     faIcon: string;
     onClick: (MouseEvent) => void;
+    additionalClasses?: string;
 }
 
 const IconComponent = (props: IconComponentTypes) => {
@@ -14,7 +15,7 @@ const IconComponent = (props: IconComponentTypes) => {
         >
                 <i
                     id={props.id}
-                    className={`fas fa-${props.faIcon}`}
+                    className={`fas fa-${props.faIcon} ${props.additionalClasses ? props.additionalClasses : ''}`}
                 />
             </span>
     )

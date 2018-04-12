@@ -2,6 +2,11 @@
   margin: 10px 0 5px 0;
 }
 
+.modal-top-line{
+  margin: 10px 0 0 0;
+
+}
+
 .sign-in-label {
   width: 150px;
 
@@ -9,4 +14,8 @@
 
 .modal-content {
   margin-bottom: 5px;
+}
+
+.error-header {
+  background-color: $red !important;
 }

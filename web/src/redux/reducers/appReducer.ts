@@ -110,6 +110,8 @@ export default (state: AppStateTypes = appState, action) => {
             return {
                 ...state,
                 signedIn: false,
+                showModal: false,
+                modalSelection: Modals.None,
             }
         }
         case FORGOT_PASSWORD: {
