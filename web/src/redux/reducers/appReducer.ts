@@ -7,9 +7,9 @@ import {
     ZERO_OUT_SLIDERS
 } from '../actions/actionTypes'
 
-import { Modals } from '../../content/utils/Enums'
+import {FooterButtons, Modals, Paths} from '../../content/utils/Enums'
 
-const pathArray = ['/favorites', '/history', '/goals', '/search']
+const pathArray = [Paths.Favorites, Paths.History, Paths.Goals, Paths.Search]
 const showActionsBackButton = (pathname) => pathArray.some(pathType => pathname.includes(pathType))
 
 export default (state: AppStateTypes = appState, action) => {
@@ -17,7 +17,7 @@ export default (state: AppStateTypes = appState, action) => {
         case LOCATION_CHANGE: {
             return {
                 ...state,
-                activeFooterButton: ((action.payload.pathname).includes('/actions') ? 'actions' : 'nutrition'),
+                activeFooterButton: ((action.payload.pathname).includes(Paths.Actions) ? FooterButtons.Actions : FooterButtons.Nutrition),
                 showActionsBackButton: showActionsBackButton(action.payload.pathname)
             }
         }

@@ -6,7 +6,7 @@ export interface ModalHeaderTypes {
     title: string;
     additionalClasses?: string;
     showCloseButton?: boolean;
-    closeModal: (MouseEvent) => void;
+    closeModal?: (MouseEvent) => void;
 }
 
 const ModalHeader = (props: ModalHeaderTypes) => {

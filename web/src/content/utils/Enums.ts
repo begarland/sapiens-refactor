@@ -1,3 +1,5 @@
+import {forgotPassword} from '../../redux/actions/index'
+
 export enum Units {
     CaloriesMetric = 'kCals',
     CaloriesImperial = 'cals',
@@ -59,4 +61,13 @@ export enum Modals {
 export enum Spinners {
     SignIn = 'sign-in',
     ForgotPassword = 'forgot-password'
+}
+
+export enum Paths {
+    Actions = '/actions',
+    Favorites = '/favorites',
+    History = '/history',
+    Goals = '/goals',
+    Search = '/search'
+
 }

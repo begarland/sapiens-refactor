@@ -20,8 +20,8 @@ export const appState: AppStateTypes = {
     showActionsBackButton: false,
     showUserActions: false,
     userActionsDrawerClass: '',
-    showModal: true,
-    modalSelection: Modals.ForgotPassword,
+    showModal: false,
+    modalSelection: Modals.None,
     adjustableSlider: {
         calories: {
             consumed: 0,
@@ -33,7 +33,7 @@ export const appState: AppStateTypes = {
         }
     },
     spinners: {
-        signIn: true,
+        signIn: false,
         forgotPassword: false,
     },
     error: '',

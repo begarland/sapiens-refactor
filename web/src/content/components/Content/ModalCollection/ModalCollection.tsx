@@ -4,18 +4,21 @@ import HeadingComponent from '../../../common/HeadingComponent/HeadingComponent'
 import MxModalContent from './Collections/MxModalContent'
 import LabelComponent from '../../../common/LabelComponent/LabelComponent'
 import SignInModalContent from './Collections/SignInModalContent'
+import ForgotPasswordModalContent from './Collections/ForgotPasswordModalContent'
+import Spinner from '../../../common/IconComponent/Spinner'
 import { AppTypes } from '../../../App'
 import { ButtonComponentTypes } from '../../../common/ButtonComponent/ButtonComponent'
 import { ModalHeaderTypes } from '../../../common/Modal/ModalHeader'
 import { ModalButtonsTypes } from '../../../common/Modal/ModalButtons'
 import { Modals } from '../../../utils/Enums'
-import ForgotPasswordModalContent from './Collections/ForgotPasswordModalContent'
+
 
 
 interface ModalCollectionTypes extends AppTypes {}
 
 const ModalCollection = (props: ModalCollectionTypes) => {
     const modalSelection = props.appState.modalSelection
+    const spinners = props.appState.spinners
 
     const closeModal = props.toggleModal(Modals.None)
     const cancelButton =  {id: 'cancel-button', label: 'Cancel', onClick: closeModal}
@@ -82,20 +85,39 @@ const ModalCollection = (props: ModalCollectionTypes) => {
         )
         modalButtons = {buttonArray: SignInRegisterCancelButtons}
     } else if (modalSelection === Modals.SignIn){
-        modalHeader = {title: 'Sign in', showCloseButton: true, closeModal: closeModal}
-        ModalContent = (
-            <SignInModalContent {...props}/>
-        )
-        modalButtons = {buttonArray: SignInForgotPasswordCancelButtons}
-    } else if (modalSelection === Modals.ForgotPassword){
+        if (spinners.signIn){
+            modalHeader = {title: 'Signing in...', showCloseButton: false,}
+            ModalContent = (
+                <div id="sign-in-modal-content" className="modal-content">
+                    <Spinner/>
+                </div>
+            )
+            modalButtons = null
+        } else {
+            modalHeader = {title: 'Sign in', showCloseButton: true, closeModal: closeModal}
+            ModalContent = (
+                <SignInModalContent {...props}/>
+            )
+            modalButtons = {buttonArray: SignInForgotPasswordCancelButtons}
+        }
+    } else if (modalSelection === Modals.ForgotPassword) {
         modalHeader = {title: 'Forgot Password?', showCloseButton: true, closeModal: closeModal}
-        if (props.appState.inputs.forgotPassword.emailExistsInDB === true){
+        if (props.appState.inputs.forgotPassword.emailExistsInDB === true) {
             ModalContent = (
                 <div id="forgot-password-modal-content" className="single-line-modal">
-                    <LabelComponent additionalClasses="full-width-label" label="A password reset email has been sent!" hideColon={true}/>
+                    <LabelComponent additionalClasses="full-width-label" label="A password reset email has been sent!"
+                                    hideColon={true}/>
                 </div>
             )
             modalButtons = {buttonArray: CloseButton}
+        } else if (spinners.forgotPassword){
+            modalHeader = {title: 'Searching for email...',}
+            ModalContent = (
+                <div id="forgot-password-modal-content" className="modal-content">
+                    <Spinner/>
+                </div>
+            )
+            modalButtons = null
         } else {
             ModalContent = (
                 <ForgotPasswordModalContent {...props} />
