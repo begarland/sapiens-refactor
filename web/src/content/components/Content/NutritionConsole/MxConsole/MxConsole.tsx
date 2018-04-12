@@ -1,10 +1,10 @@
 import * as React from 'react'
-import {LabelDataDisplayTypes} from '../../../../common/LabelDataDisplay/LabelDataDisplay'
-import {BarColorsTypes} from '../../../../utils/MiscellaneousInterfaces'
-import ProgressBar from '../../../../common/ProgressBar/RegularProgressBar/ProgressBar'
-import HeadingComponent from '../../../../common/HeadingComponent/HeadingComponent'
 import LabelDataArrayDisplay from '../../../../common/LabelDataDisplay/LabelDataArrayDisplay'
-import {ProgressBarFillTypes} from '../../../../../redux/store/templates/dailyState'
+import HeadingComponent from '../../../../common/HeadingComponent/HeadingComponent'
+import ProgressBar from '../../../../common/ProgressBar/RegularProgressBar/ProgressBar'
+import { LabelDataDisplayTypes } from '../../../../common/LabelDataDisplay/LabelDataDisplay'
+import { BarColorsTypes } from '../../../../utils/MiscellaneousInterfaces'
+import { ProgressBarFillTypes } from '../../../../../redux/store/templates/dailyState'
 
 interface MxConsoleTypes {
     heading: string;

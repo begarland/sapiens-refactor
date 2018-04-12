@@ -52,7 +52,6 @@ export enum Modals {
     SignInOrRegister = 'sign-in-or-register',
     SignIn = 'sign-in',
     ForgotPassword = 'forgot-password',
-    Register = 'register',
     SignOut = 'sign-out',
     WeighIn = 'weigh-in',
     Calories = 'calories',
@@ -70,6 +69,8 @@ export enum Paths {
     Favorites = '/favorites',
     History = '/history',
     Goals = '/goals',
-    Search = '/search'
+    Search = '/search',
+    Register = '/register',
+    EditProfile = '/editProfile'
 
 }

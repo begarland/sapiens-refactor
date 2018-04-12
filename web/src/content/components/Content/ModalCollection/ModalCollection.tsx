@@ -10,7 +10,7 @@ import { AppTypes } from '../../../App'
 import { ButtonComponentTypes } from '../../../common/ButtonComponent/ButtonComponent'
 import { ModalHeaderTypes } from '../../../common/Modal/ModalHeader'
 import { ModalButtonsTypes } from '../../../common/Modal/ModalButtons'
-import { Modals } from '../../../utils/Enums'
+import { Modals, Paths } from '../../../utils/Enums'
 import WeighInModalContent from './Collections/WeighInModalContent'
 
 
@@ -38,7 +38,7 @@ const ModalCollection = (props: ModalCollectionTypes) => {
 
     const SignInRegisterCancelButtons: ButtonComponentTypes [] = [
         {id: 'sign-in-button', label: 'Sign in', onClick: props.toggleModal(Modals.SignIn)},
-        {id: 'register-button', label: 'Register', onClick: props.toggleModal(Modals.Register)},
+        {id: 'register-button', label: 'Register', onClick: props.navigateTo(Paths.Register)},
         cancelButton,
     ]
 

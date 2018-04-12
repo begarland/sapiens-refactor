@@ -28,18 +28,6 @@ const ActionsConsole = (props: ActionsConsoleTypes) => {
                         )
                     }}
                 />)}
-                {["/", "/actions/"].map((path, index) =>
-                <Route
-                    key={index}
-                    exact={true}
-                    path={`${path}test`}
-                    render={() => {
-                        return (
-                            <h1>something </h1>
-                        )
-                    }}
-                />)}
-
             </Switch>
         </div>
     )

@@ -4,7 +4,7 @@ import {
     TOGGLE_USER_ACTIONS, ZERO_OUT_SLIDERS,
     FORGOT_PASSWORD
 } from './actionTypes'
-import { Mx, Hydration, UI, Calories, } from '../../content/utils/Enums'
+import {Mx, Hydration, UI, Calories, Paths, Modals,} from '../../content/utils/Enums'
 import {push} from 'react-router-redux'
 
 export const changeInputValue = (inputType: string, key: string, value: string) => {
@@ -27,8 +27,6 @@ export const toggleUserActions = () => (dispatch, getState) => {
     const currentUserActionStatus = getState().appState.showUserActions
     if (signedIn) {
         dispatch({type: TOGGLE_USER_ACTIONS, show: !currentUserActionStatus})
-    } else {
-        dispatch({type: TOGGLE_MODAL, show: true, modalSelection: 'sign-in-or-register'})
     }
 }
 export const toggleModal = (modalSelection: string) => (dispatch, getState) => {
@@ -69,8 +67,12 @@ export const navigateTo = (location: string) => (dispatch, getState) => {
     const signedIn = getState().appState.signedIn
     if (signedIn){
         dispatch(push(location))
+    } else if (location === Paths.Register || location === `${Paths.Actions}${Paths.Search}`) {
+        dispatch(push(location))
+        dispatch({type: TOGGLE_MODAL, show: false, modalSelection: Modals.None})
+
     } else {
-        dispatch({type: TOGGLE_MODAL, show: true, modalSelection: 'sign-in-or-register'})
+        dispatch({type: TOGGLE_MODAL, show: true, modalSelection: Modals.SignInOrRegister})
     }
 }
 

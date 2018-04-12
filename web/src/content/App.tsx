@@ -13,7 +13,6 @@ export interface AppTypes {
     memberState: MemberStateTypes;
     navigateToNutrition: (MouseEvent) => void;
     navigateToActions: (MouseEvent) => void;
-    navigateToNestedAction: (MouseEvent) => void;
     navigateBackFromNestedAction: (MouseEvent) => void;
     navigateTo: (string) => (MouseEvent) => void;
     toggleUserActions: (MouseEvent) => void;

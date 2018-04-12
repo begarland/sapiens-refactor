@@ -45,16 +45,25 @@
     position: absolute;
     right: 5px;
     top: 10px;
-    z-index: $header-and-footer-index;
 
     button {
       background-color: $white;
       color: $green;
     }
 
-
   }
 
+
+  #sign-in-header-buttons-container{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+
+    button {
+      background-color: $white;
+      color: $green;
+    }
+  }
 
 
 
@@ -71,6 +80,21 @@
       button {
         height: 25px;
         width: 43%;
+      }
+    }
+
+    #sign-in-header-buttons-container{
+      right: 5px;
+      top: $mobile-header-height - 10px;
+      width: 100%;
+      text-align: right;
+
+      button {
+        height: 25px;
+        width: 33%;
+
+        background-color: $white;
+        color: $green;
       }
     }
 

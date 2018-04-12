@@ -19,7 +19,7 @@ const InvisibleFullScreen = (props: InvisibleFullScreenTypes) => {
     }
 
     if (!signedIn){
-        if (modalSelection === Modals.SignInOrRegister || modalSelection === Modals.SignIn || modalSelection === Modals.Register) {
+        if (modalSelection === Modals.SignInOrRegister || modalSelection === Modals.SignIn) {
             onClick = () => null
         }
     } else {
