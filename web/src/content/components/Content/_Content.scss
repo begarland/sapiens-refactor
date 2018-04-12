@@ -32,3 +32,11 @@
 
 
 }
+
+
+.signed-out-content {
+  @media (max-width: $landscape-phone-and-below-max-width){
+    height: calc(100% - 25px) !important;
+    top: 25px !important;
+  }
+}

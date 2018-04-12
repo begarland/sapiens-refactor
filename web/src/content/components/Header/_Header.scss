@@ -38,10 +38,41 @@
       font-size: 40px;
 
     }
+
   }
+
+  #sign-in-register-header-buttons-container{
+    position: absolute;
+    right: 5px;
+    top: 10px;
+    z-index: $header-and-footer-index;
+
+    button {
+      background-color: $white;
+      color: $green;
+    }
+
+
+  }
+
+
+
 
   @media (max-width: $landscape-phone-and-below-max-width){
     height: $mobile-header-height;
+
+    #sign-in-register-header-buttons-container{
+      top: $mobile-header-height - 10px;
+      text-align: center;
+      left: 0;
+      right: 0;
+      width: 100%;
+
+      button {
+        height: 25px;
+        width: 43%;
+      }
+    }
 
     .header-logo-img{
       left: -5px;
@@ -74,6 +105,10 @@
   @media (min-width: $landscape-phone-and-below-max-width + 1) and (max-width: $landscape-phone-to-portrait-tablet-max-width){
     height: $mobile-header-height;
 
+    #sign-in-register-header-buttons-container{
+      top: 5px;
+    }
+
     .header-logo-img{
       left: -5px;
       top: 0px;
@@ -103,6 +138,10 @@
   }
 
   @media (min-width: $portrait-tablet-to-landscape-and-desktop-min-width){
+    #sign-in-register-header-buttons-container{
+      top: 5px;
+    }
+
     .header-logo {
       width: 400px;
       top: 7.5px;
@@ -126,7 +165,15 @@
   @media (min-width: $large-desktop-min-width){
 
   }
-
-
-
 }
+
+
+
+.signed-out-header {
+  @media (max-width: $landscape-phone-and-below-max-width){
+    height: $mobile-header-height + 25px !important;
+  }
+}
+
+
+

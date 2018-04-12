@@ -1,14 +1,14 @@
 export const dailyState: DailyStateTypes = {
     calories: {
         consumed: 0,
-        allotted: 0,
+        allotted: 1300,
         burned: 0,
-        target: 0,
+        target: 1300,
         progressBarFills: {
-            fill: 75,
-            innerFill: 30,
-            targetFill: 225,
-            totalFill: 225,
+            fill: 0,
+            innerFill: 0,
+            targetFill: 0,
+            totalFill: 250,
             last: {
                 fill: 0,
                 innerFill: 0,
@@ -18,13 +18,13 @@ export const dailyState: DailyStateTypes = {
     hydration: {
         hydrated: 0,
         dehydrated: 0,
-        baseHydration: 0,
-        targetHydration: 0,
+        baseHydration: 128,
+        targetHydration: 128,
         progressBarFills: {
-            fill: 75,
-            innerFill: 30,
-            targetFill: 225,
-            totalFill: 225,
+            fill: 0,
+            innerFill: 0,
+            targetFill: 0,
+            totalFill: 250,
             last: {
                 fill: 0,
                 innerFill: 0,
@@ -37,7 +37,7 @@ export const dailyState: DailyStateTypes = {
             units: 'g',
             dvUnits: 'g',
             dailyValue: 50.57,
-            consumedValue: 20,
+            consumedValue: 0,
             tagname: 'FAT',
         },
         FASAT: {
@@ -45,7 +45,7 @@ export const dailyState: DailyStateTypes = {
             units: 'g',
             dvUnits: 'g',
             dailyValue: 15.56,
-            consumedValue: 10,
+            consumedValue: 0,
             tagname: 'FASAT',
         },
         CHOLE: {
@@ -53,7 +53,7 @@ export const dailyState: DailyStateTypes = {
             units: 'mg',
             dvUnits: 'mg',
             dailyValue: 233400,
-            consumedValue: 180000,
+            consumedValue: 0,
             tagname: 'CHOLE',
         },
         NA: {
@@ -61,7 +61,7 @@ export const dailyState: DailyStateTypes = {
             units: 'mg',
             dvUnits: 'mg',
             dailyValue: 1867.2,
-            consumedValue: 1500,
+            consumedValue: 0,
             tagname: 'NA',
         },
         K: {
@@ -69,7 +69,7 @@ export const dailyState: DailyStateTypes = {
             units: 'mg',
             dvUnits: 'mg',
             dailyValue: 2723,
-            consumedValue: 2320,
+            consumedValue: 0,
             tagname: 'K',
         },
         CHODF: {
@@ -77,7 +77,7 @@ export const dailyState: DailyStateTypes = {
             units: 'g',
             dvUnits: 'g',
             dailyValue: 233.4,
-            consumedValue: 230,
+            consumedValue: 0,
             tagname: 'CHODF',
         },
         FIBTG: {
@@ -85,7 +85,7 @@ export const dailyState: DailyStateTypes = {
             units: 'g',
             dvUnits: 'g',
             dailyValue: 19.45,
-            consumedValue: 10,
+            consumedValue: 0,
             tagname: 'FIBTG',
         },
         PROCNT: {
@@ -93,7 +93,7 @@ export const dailyState: DailyStateTypes = {
             units: 'g',
             dvUnits: 'g',
             dailyValue: 38.9,
-            consumedValue: 30,
+            consumedValue: 0,
             tagname: 'PROCNT',
         },
         VITA_IU : {
@@ -101,7 +101,7 @@ export const dailyState: DailyStateTypes = {
             units: 'IU',
             dvUnits: 'IU',
             dailyValue: 3890,
-            consumedValue: 820,
+            consumedValue: 0,
             tagname: 'VITA_IU',
         },
         VITC: {
@@ -109,7 +109,7 @@ export const dailyState: DailyStateTypes = {
             units: 'mg',
             dvUnits: 'mg',
             dailyValue: 46.68,
-            consumedValue: 20,
+            consumedValue: 0,
             tagname: 'VITC',
         },
         CA: {
@@ -117,7 +117,7 @@ export const dailyState: DailyStateTypes = {
             units: 'mg',
             dvUnits: 'mg',
             dailyValue: 778,
-            consumedValue: 230,
+            consumedValue: 0,
             tagname: 'CA',
         },
         FE: {
@@ -125,7 +125,7 @@ export const dailyState: DailyStateTypes = {
             units: 'mg',
             dvUnits: 'mg',
             dailyValue: 14.004,
-            consumedValue: 10,
+            consumedValue: 0,
             tagname: 'FE',
         },
         ERGCAL: {
@@ -133,7 +133,7 @@ export const dailyState: DailyStateTypes = {
             units: 'µg',
             dvUnits: 'µg',
             dailyValue: 7.78,
-            consumedValue: 4,
+            consumedValue: 0,
             tagname: 'ERGCAL',
         },
         TOCPHA: {
@@ -141,7 +141,7 @@ export const dailyState: DailyStateTypes = {
             units: 'µg',
             dvUnits: 'µg',
             dailyValue: 15.56,
-            consumedValue: 10,
+            consumedValue: 0,
             tagname: 'TOCPHA',
         },
         VITK1: {
@@ -149,7 +149,7 @@ export const dailyState: DailyStateTypes = {
             units: 'µg',
             dvUnits: 'µg',
             dailyValue: 62.24,
-            consumedValue: 40,
+            consumedValue: 0,
             tagname: 'VITK1',
         },
         THIA: {
@@ -157,7 +157,7 @@ export const dailyState: DailyStateTypes = {
             units: 'mg',
             dvUnits: 'mg',
             dailyValue: 1.167,
-            consumedValue: .5,
+            consumedValue: 0,
             tagname: 'THIA',
         },
         RIBF: {
@@ -165,7 +165,7 @@ export const dailyState: DailyStateTypes = {
             units: 'mg',
             dvUnits: 'mg',
             dailyValue: 1.3226,
-            consumedValue: .5,
+            consumedValue: 0,
             tagname: 'RIBF',
         },
         NIA: {
@@ -189,7 +189,7 @@ export const dailyState: DailyStateTypes = {
             units: 'µg',
             dvUnits: 'µg',
             dailyValue: 311.2,
-            consumedValue: 210,
+            consumedValue: 0,
             tagname: 'FOL',
         },
         VITB12: {
@@ -197,7 +197,7 @@ export const dailyState: DailyStateTypes = {
             units: 'µg',
             dvUnits: 'µg',
             dailyValue: 4.668,
-            consumedValue: 4,
+            consumedValue: 0,
             tagname: 'VITB12',
         },
         PANTAC: {
@@ -205,7 +205,7 @@ export const dailyState: DailyStateTypes = {
             units: 'mg',
             dvUnits: 'mg',
             dailyValue: 7.78,
-            consumedValue: 5,
+            consumedValue: 0,
             tagname: 'PANTAC',
         },
         P: {
@@ -213,7 +213,7 @@ export const dailyState: DailyStateTypes = {
             units: 'mg',
             dvUnits: 'mg',
             dailyValue: 778,
-            consumedValue: 740,
+            consumedValue: 0,
             tagname: 'P',
         },
         MG: {
@@ -221,7 +221,7 @@ export const dailyState: DailyStateTypes = {
             units: 'mg',
             dvUnits: 'mg',
             dailyValue: 311.2,
-            consumedValue: 210,
+            consumedValue: 0,
             tagname: 'MG',
         },
         ZN: {
@@ -229,7 +229,7 @@ export const dailyState: DailyStateTypes = {
             units: 'mg',
             dvUnits: 'mg',
             dailyValue: 11.67,
-            consumedValue: 10,
+            consumedValue: 0,
             tagname: 'ZN',
         },
         SE: {
@@ -237,7 +237,7 @@ export const dailyState: DailyStateTypes = {
             units: 'µg',
             dvUnits: 'µg',
             dailyValue: 54.46,
-            consumedValue: 40,
+            consumedValue: 0,
             tagname: 'SE',
         },
         CU: {
@@ -245,7 +245,7 @@ export const dailyState: DailyStateTypes = {
             units: 'mg',
             dvUnits: 'mg',
             dailyValue: 1.556,
-            consumedValue: .5,
+            consumedValue: 0,
             tagname: 'CU',
         },
         MN: {
@@ -253,7 +253,7 @@ export const dailyState: DailyStateTypes = {
             units: 'mg',
             dvUnits: 'mg',
             dailyValue: 1.556,
-            consumedValue: .5,
+            consumedValue: 0,
             tagname: 'MN',
         }
     },

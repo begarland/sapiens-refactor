@@ -42,12 +42,14 @@ html {
 @import 'content/common/ProgressBar/MiniProgressBar/_MiniProgressBar';
 @import 'content/common/ProgressBar/MiniProgressBar/MiniSliderBar/_MiniSliderBar';
 @import 'content/common/Modal/_Modal';
+@import 'content/common/AdjustableSlider/AdjustableSlider';
 
 @import 'content/App';
 @import 'content/components/Header/_Header';
 @import 'content/components/Content/UserActions/_UserActions';
 @import 'content/components/Footer/_Footer';
 @import 'content/components/Content/_Content';
+@import 'content/components/Content/ModalCollection/_ModalCollections';
 @import 'content/components/Content/NutritionConsole/_NutritionConsole';
 @import 'content/components/Content/ActionsConsole/_ActionsConsole';
 @import 'content/components/Content/ActionsConsole/ActionsHome/_ActionsHome';

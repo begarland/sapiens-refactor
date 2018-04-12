@@ -10,7 +10,7 @@
 }
 #modal {
   max-height: 85%;
-  min-width: 350px;
+  min-width: 310px;
   background-color: $white;
   border: $black-border;
   border-radius: $border-radius;
@@ -47,6 +47,7 @@
   }
 
   #modal-content-container {
+    overflow-x: hidden;
     overflow-y: auto;
     display: block;
     max-height: 60vh;
@@ -59,8 +60,10 @@
     width: 100%;
     background-color: $white;
   }
+
   @media (max-width: $landscape-phone-and-below-max-width) {
     width: 95%;
+    min-width: 324px;
     max-height: calc(100% - #{$mobile-header-height} - #{$mobile-footer-height} - 45px);
     margin-bottom: $modal-mobile-bottom-pad;
 
@@ -71,6 +74,7 @@
 
     #modal-content-container {
       max-height: 57vh;
+
     }
   }
 
@@ -98,22 +102,30 @@
         and (max-width: $web-app-width-iPhone6) {
       max-height: calc(100% - #{$mobile-header-height} - #{$mobile-footer-height} - 20px);
       margin-bottom: $modal-mobile-bottom-pad + 4px;
+
       #modal-content-container {
         max-height: 52vh;
       }
     }
 
+  }
 
-
+  @media(max-height: $small-phone-landscape-320px){
+    #modal-content-container {
+      max-height: 43vh;
+    }
   }
 
   @media (min-width: $portrait-tablet-to-landscape-and-desktop-min-width) and (max-width: $large-desktop-min-width - 1){
+    min-width: 324px;
     max-width: 76%;
   }
 
   @media (min-width: $large-desktop-min-width) {
     max-width: 50%;
   }
+
+
 
 
 

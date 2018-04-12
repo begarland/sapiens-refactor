@@ -3,18 +3,24 @@ import { routerReducer } from 'react-router-redux'
 import { combineEpics } from 'redux-observable'
 import appState from './appReducer'
 import dailyState from './dailyStateReducer'
-import userState from './userReducer'
+import memberState from './memberReducer'
 
-import simpleEpic from '../../content/sample/simpleEpic'
+import signInEpic from '../epics/signInEpic'
+import forgotPasswordEpic from '../epics/forgotPasswordEpic'
+import weighInEpic from '../epics/weighInEpic'
 
 export const rootReducer =  combineReducers({
     router: routerReducer,
     appState,
     dailyState,
-    userState,
+    memberState,
 
 })
 
 export const rootEpic = combineEpics (
-    simpleEpic,
+    signInEpic,
+    forgotPasswordEpic,
+    weighInEpic,
+
+
 )

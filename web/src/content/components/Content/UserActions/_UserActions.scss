@@ -26,7 +26,7 @@
   }
 
 
-  @media (max-width: $landscape-phone-and-below-max-width){
+  @media (max-width: $landscape-phone-to-portrait-tablet-max-width){
     top: $mobile-header-height;
 
     .dropdown-option {
@@ -36,8 +36,9 @@
 
     }
 
-
   }
+
+
 
 }
 #user-actions-drawer.slide-in {

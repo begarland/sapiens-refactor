@@ -4,14 +4,13 @@ import NutritionConsole from './NutritionConsole/NutritionConsole'
 import ActionsConsole from './ActionsConsole/ActionsConsole'
 import {AppTypes} from '../../App'
 import UserActions from './UserActions/UserActions'
-import Modal from '../../common/Modal/Modal'
 import ModalCollection from './ModalCollection/ModalCollection'
 
 interface ContentTypes extends AppTypes {}
 
 const Content = (props: ContentTypes) => {
     return (
-        <div id="content-root">
+        <div id="content-root" className={`${props.appState.signedIn ? "" : "signed-out-content"}`}>
             <div id="landscape-tablet-and-above-content">
                 <NutritionConsole {...props}/>
                 <ActionsConsole {...props}/>

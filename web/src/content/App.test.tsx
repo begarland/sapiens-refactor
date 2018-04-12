@@ -7,7 +7,7 @@ import {shallow, mount, render} from 'enzyme'
 import App from './App'
 import {appState} from '../redux/store/templates/appState'
 import {dailyState} from '../redux/store/templates/dailyState'
-import {userState} from '../redux/store/templates/userState'
+import {memberState} from '../redux/store/templates/memberState'
 
 Enzyme.configure({adapter: new Adapter()})
 
@@ -20,13 +20,19 @@ describe('<App/>', () => {
     const navigateToFunction = sinon.spy()
     const toggleUserActionsFunction = sinon.spy()
     const toggleModalFunction = sinon.spy()
+    const handleDragFunction = sinon.spy()
+    const inputChangeFunction = sinon.spy()
+    const signInFunction = sinon.spy()
+    const signOutFunction = sinon.spy()
+    const forgotPasswordFunction = sinon.spy()
+    const weighInFunction = sinon.spy()
 
 
     const AppAllProps = (
         <App
             appState={appState}
             dailyState={dailyState}
-            userState={userState}
+            memberState={memberState}
             navigateToNutrition={navigateToNutritionFunction}
             navigateToActions={navigateToActionsFunction}
             navigateToNestedAction={navigateToNestedActionFunction}
@@ -34,6 +40,12 @@ describe('<App/>', () => {
             navigateTo={navigateToFunction}
             toggleUserActions={toggleUserActionsFunction}
             toggleModal={toggleModalFunction}
+            handleDrag={handleDragFunction}
+            inputChange={inputChangeFunction}
+            signOut={signOutFunction}
+            signIn={signInFunction}
+            forgotPassword={forgotPasswordFunction}
+            weighIn={weighInFunction}
 
         />)
 

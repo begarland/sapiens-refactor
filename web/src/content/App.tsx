@@ -5,12 +5,12 @@ import Content from './components/Content/Content'
 import InvisibleFullScreen from './common/InvisibleFullScreen/InvisibleFullScreen'
 import { AppStateTypes } from '../redux/store/templates/appState'
 import { DailyStateTypes } from '../redux/store/templates/dailyState'
-import { UserStateTypes } from '../redux/store/templates/userState'
+import { MemberStateTypes } from '../redux/store/templates/memberState'
 
 export interface AppTypes {
     appState: AppStateTypes;
     dailyState: DailyStateTypes;
-    userState: UserStateTypes;
+    memberState: MemberStateTypes;
     navigateToNutrition: (MouseEvent) => void;
     navigateToActions: (MouseEvent) => void;
     navigateToNestedAction: (MouseEvent) => void;
@@ -18,12 +18,19 @@ export interface AppTypes {
     navigateTo: (string) => (MouseEvent) => void;
     toggleUserActions: (MouseEvent) => void;
     toggleModal: (string) => (MouseEvent) => void;
+    handleDrag: (mxType: string, selection: string) => (MouseEvent, Object) => void;
+    inputChange: (inputType: string) => (id: string, value: string | boolean) => void;
+    signIn: () => void;
+    signOut: () => void;
+    forgotPassword: () => void;
+    weighIn: () => void;
 
 }
 
 const App = (props: AppTypes) => {
+    const test = ()=> {return null}
     return (
-        <div className="App">
+        <div className="App" onClick={test}>
             <Header {...props} />
             <InvisibleFullScreen {...props} />
             <Content {...props} />
