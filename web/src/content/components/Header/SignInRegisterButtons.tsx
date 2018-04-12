@@ -8,8 +8,8 @@ interface SignInRegisterButtonsTypes extends AppTypes {}
 
 const SignInRegisterButtons = (props: SignInRegisterButtonsTypes) => {
     const SignInRegisterButtons: ButtonComponentTypes [] = [
-        {id: 'sign-in-button', label: 'Sign in', onClick: props.toggleModal(Modals.SignIn)},
         {id: 'register-button', label: 'Register', onClick: props.navigateTo(Paths.Register)},
+        {id: 'sign-in-button', label: 'Sign in', onClick: props.toggleModal(Modals.SignIn)},
     ]
 
     const SignInButton: ButtonComponentTypes [] = [

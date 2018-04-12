@@ -10,7 +10,7 @@ export interface SingleInputTypes {
     hideColon?: boolean;
     inputType?: string;
     additionalInputClasses?: string;
-    selectOptions?: string[];
+    selectOptions?: {text: string, value: string | boolean}[];
     data: any;
     extraData?: string;
     extraDataAdditionalClasses?: string;
@@ -37,6 +37,10 @@ const InputGenerator = (props: InputGeneratorTypes) => {
                     return (
                         <Checkbox {...input} key={index} onInputChange={props.onInputChange}/>
                     )
+                } else if (input.inputType === 'range'){
+
+                } else if (input.inputType === 'date'){
+
                 }
                 return (
                     <Input {...input} key={index} onInputChange={props.onInputChange}/>

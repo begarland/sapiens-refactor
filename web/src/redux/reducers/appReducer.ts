@@ -18,7 +18,9 @@ export default (state: AppStateTypes = appState, action) => {
             return {
                 ...state,
                 activeFooterButton: ((action.payload.pathname).includes(Paths.Actions) ? FooterButtons.Actions : FooterButtons.Nutrition),
-                showActionsBackButton: showActionsBackButton(action.payload.pathname)
+                showActionsBackButton: showActionsBackButton(action.payload.pathname),
+                showModal: false,
+                modalSelection: Modals.None,
             }
         }
         case CHANGE_INPUT_VALUE: {

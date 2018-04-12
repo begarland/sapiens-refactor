@@ -3,7 +3,7 @@ import LabelComponent from '../../LabelComponent/LabelComponent'
 import { SingleInputTypes } from '../InputGenerator'
 
 interface SelectTypes extends SingleInputTypes {
-    onInputChange: (id: string, value: string) => void;
+    onInputChange: (id: string, value: string | boolean) => void;
 }
 
 const Select = (props: SelectTypes) => {
@@ -16,14 +16,14 @@ const Select = (props: SelectTypes) => {
                 value={props.data}
                 onChange={(event) => {props.onInputChange(props.id, event.target.value)}}
             >
-                {props.selectOptions.map((option: string, optionIndex: number) => {
+                {props.selectOptions.map((option: {text: string, value: string | boolean}, optionIndex: number) => {
                     return(
                         <option
                             className={`select-option`}
                             key={optionIndex}
-                            value={option}
+                            value={`${option.value}`}
                         >
-                            {option}
+                            {option.text}
                         </option>
                     )
                 })}

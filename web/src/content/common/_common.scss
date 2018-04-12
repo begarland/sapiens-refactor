@@ -84,3 +84,29 @@
   margin: 10px 0 10px 0;
   color: $gray;
 }
+
+#step-display-container{
+  display: inline;
+  margin-top: 10px;
+}
+
+.step-display {
+  border-radius: 50%;
+  background-color: $gray;
+  color: $white;
+  height: 25px;
+  width: 25px;
+  display: inline-block;
+  margin: 2px;
+}
+
+.step-label{
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  margin-top: 4px;
+}
+
+.current-step {
+  background-color: $green;
+}

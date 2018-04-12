@@ -1,8 +1,7 @@
 import {FooterButtons, Modals} from '../../../content/utils/Enums'
-import {isBoolean} from 'util'
 
 export const appState: AppStateTypes = {
-    signedIn: true,
+    signedIn: false,
     showNavigateButton: true,
     moveBox: false,
     spinLogo: true,
@@ -18,7 +17,35 @@ export const appState: AppStateTypes = {
         },
         weighIn: {
             weight: null,
-        }
+        },
+        createMember: {
+            step: 1,
+            email: '',
+            confirmEmail: '',
+            password: '',
+            confirmPassword: '',
+            showPassword: false,
+            name: '',
+            birthDate: '',
+            height: null, //in/mm
+            weight: null, //lb/kg
+            metric: false,
+            gender: 50, //0 male - 100 female #feminism
+            targetWeightChange: 0,
+        },
+        editMember: {
+            email: '',
+            confirmEmail: '',
+            password: '',
+            confirmPassword: '',
+            name: '',
+            height: 0,
+            weight: 0,
+            metric: false,
+            gender: 50,
+            targetWeightChange: 0,
+        },
+
     },
     activeFooterButton: FooterButtons.Nutrition,
     showActionsBackButton: false,
@@ -73,6 +100,33 @@ export interface InputTypes {
     },
     weighIn: {
         weight: null | number;
+    },
+    createMember: {
+        step: number;
+        email: string;
+        confirmEmail: string;
+        password: string;
+        confirmPassword: string;
+        showPassword: boolean;
+        name: string;
+        birthDate: string;
+        height: null | number; //in/mm
+        weight: null | number; //lb/kg
+        metric: boolean;
+        gender: number; //0 male - 100 female #feminism
+        targetWeightChange: number;
+    },
+    editMember: {
+        email: string;
+        confirmEmail: string;
+        password: string;
+        confirmPassword: string;
+        name: string;
+        height: number;
+        weight: number;
+        metric: boolean;
+        gender: number;
+        targetWeightChange: number;
     }
 
 }

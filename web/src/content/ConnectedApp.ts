@@ -81,7 +81,13 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         },
         weighIn: () => {
             dispatch(weighIn())
-        }
+        },
+        stepBack: (inputType: string) => (event: MouseEvent) => {
+
+        },
+        stepForward: (inputType: string) => (event: MouseEvent) => {
+
+        },
     }
 }
 

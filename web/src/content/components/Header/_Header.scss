@@ -57,7 +57,7 @@
   #sign-in-header-buttons-container{
     position: absolute;
     right: 5px;
-    top: 10px;
+    top: 5px;
 
     button {
       background-color: $white;
@@ -195,7 +195,7 @@
 
 .signed-out-header {
   @media (max-width: $landscape-phone-and-below-max-width){
-    height: $mobile-header-height + 25px !important;
+    height: $mobile-header-height + $signed-out-additional-header-height !important;
   }
 }
 
