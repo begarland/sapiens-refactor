@@ -1,17 +1,21 @@
-import {forgotPassword} from '../../redux/actions/index'
-
 export enum Units {
     CaloriesMetric = 'kCals',
     CaloriesImperial = 'cals',
     HydrationMetric = 'L',
     HydrationImperial = 'oz',
     WeightMetric = 'kg',
-    WeightImperial = 'lbs',
+    WeightImperial = 'lb',
+    HeightMetric = 'cm',
+    HeightImperial = 'in'
 }
 
 export enum Mx {
     Calories = 'calories',
     Hydration = 'hydration',
+    CaloriesConsumed = 'caloriesConsumed',
+    CaloriesBurned = 'caloriesBurned',
+    Hydrated = 'hydrated',
+    Dehydrated = 'dehydrated'
 }
 
 export enum Calories {

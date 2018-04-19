@@ -5,6 +5,32 @@
 #create-member-display-container{
   position: relative;
   top: $header-height;
+  margin: auto;
 
 
+  .create-member-label {
+    width: 150px;
+  }
+
+  .input-container {
+    width: 400px;
+    margin: 10px auto;
+  }
+
+
+  .height-weight-input{
+    width: 10%;
+    text-align: center;
+  }
+  .height-weight-label{
+    width: 10%;
+    text-align: left;
+    margin-left: 2px;
+
+  }
 }
+
+.disabled-button {
+  display: none;
+}
+

@@ -16,10 +16,12 @@ const AdjustableSliderArrayCreator = (props: AdjustableSliderArrayDisplayTypes) 
                         label={value.label}
                         units={value.units}
                         deltaValue={value.deltaValue}
+                        sliderPosition={value.sliderPosition}
                         sliderThumbColor={value.sliderThumbColor}
                         handleDrag={value.handleDrag}
                         largeTickLocations={value.largeTickLocations}
                         numSmallTicks={value.numSmallTicks}
+                        inputChange={value.inputChange}
                     />
                 )
             })

@@ -27,6 +27,7 @@ describe('<App/>', () => {
     const weighInFunction = sinon.spy()
     const stepBackFunction = sinon.spy()
     const stepForwardFunction = sinon.spy()
+    const stepToFunction = sinon.spy()
 
 
     const AppAllProps = (
@@ -48,6 +49,7 @@ describe('<App/>', () => {
             weighIn={weighInFunction}
             stepBack={stepBackFunction}
             stepForward={stepForwardFunction}
+            stepTo={stepToFunction}
 
         />)
 

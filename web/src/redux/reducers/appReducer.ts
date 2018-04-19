@@ -4,7 +4,7 @@ import { LOCATION_CHANGE } from 'react-router-redux'
 import {
     CHANGE_INPUT_VALUE, HANDLE_DRAG, SIGN_IN, SIGN_IN_FAILED, SIGN_IN_SUCCESSFUL, SIGN_OUT, SWITCH_BUTTON, TOGGLE_MODAL,
     TOGGLE_USER_ACTIONS, FORGOT_PASSWORD, FORGOT_PASSWORD_FAILED, FORGOT_PASSWORD_SUCCESSFUL,
-    ZERO_OUT_SLIDERS, WEIGH_IN, WEIGH_IN_SUCCESSFUL, WEIGH_IN_FAILED
+    ZERO_OUT_SLIDERS, WEIGH_IN, WEIGH_IN_SUCCESSFUL, WEIGH_IN_FAILED, CHANGE_STEP
 } from '../actions/actionTypes'
 
 import {FooterButtons, Modals, Paths} from '../../content/utils/Enums'
@@ -24,13 +24,18 @@ export default (state: AppStateTypes = appState, action) => {
             }
         }
         case CHANGE_INPUT_VALUE: {
+            let value = action.value
+            if (action.value === 'true' || action.value === 'false'){
+                value = JSON.parse(action.value)
+            }
+            let key = (action.key).split('_').pop()
             return {
                 ...state,
                 inputs: {
                     ...state.inputs,
                     [action.inputType]: {
                         ...state.inputs[action.inputType],
-                        [action.key]: action.value,
+                        [key]: value,
                     }
                 }
             }
@@ -61,19 +66,23 @@ export default (state: AppStateTypes = appState, action) => {
         case HANDLE_DRAG: {
             return {
                 ...state,
-                adjustableSlider: {
-                    ...state.adjustableSlider,
-                    [action.mxType]: {
-                        ...state.adjustableSlider[action.mxType],
-                        [action.selection]: action.deltaValue
-                    }
+                adjustableSliderValues: {
+                    ...state.adjustableSliderValues,
+                    [action.mxSelection]: action.position
+                }
+                inputs: {
+                    ...state.inputs,
+                    adjustableSlider: {
+                        ...state.inputs.adjustableSlider,
+                        [action.mxSelection]: action.deltaValue
+                    },
                 }
             }
         }
         case ZERO_OUT_SLIDERS: {
             return {
                 ...state,
-                adjustableSlider: appState.adjustableSlider
+                inputs: appState.inputs
             }
         }
         case SIGN_IN: {
@@ -177,6 +186,18 @@ export default (state: AppStateTypes = appState, action) => {
                 modalSelection: Modals.Error,
                 error: action.error
 
+            }
+        }
+        case CHANGE_STEP: {
+            return {
+                ...state,
+                inputs: {
+                    ...state.inputs,
+                    [action.inputType]: {
+                        ...state.inputs[action.inputType],
+                        step: action.newStep
+                    }
+                }
             }
         }
         default: {

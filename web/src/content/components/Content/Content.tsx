@@ -26,7 +26,7 @@ const Content = (props: ContentTypes) => {
                             )
                         }}
                     />
-                    <Route
+                    {!props.appState.signedIn && <Route
                         exact={true}
                         path="/register"
                         render={() => {
@@ -34,7 +34,7 @@ const Content = (props: ContentTypes) => {
                                 <CreateMember {...props} device="landscape-tablet-and-above"/>
                             )
                         }}
-                    />
+                    />}
                 </Switch>
             </div>
             <div id="mobile-and-portrait-tablet-content">
@@ -59,7 +59,7 @@ const Content = (props: ContentTypes) => {
                             )
                         }}
                     />
-                    <Route
+                    {!props.appState.signedIn && <Route
                         exact={true}
                         path="/register"
                         render={() => {
@@ -67,7 +67,7 @@ const Content = (props: ContentTypes) => {
                                 <CreateMember {...props} device="mobile-and-portrait-tablet"/>
                             )
                         }}
-                    />
+                    />}
                 </Switch>
             </div>
             <UserActions {...props} />

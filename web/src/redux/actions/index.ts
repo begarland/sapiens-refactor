@@ -1,5 +1,5 @@
 import {
-    CHANGE_INPUT_VALUE, HANDLE_DRAG, SIGN_IN, SIGN_OUT,
+    CHANGE_INPUT_VALUE, CHANGE_STEP, HANDLE_DRAG, SIGN_IN, SIGN_OUT,
     SWITCH_BUTTON, TOGGLE_MODAL, WEIGH_IN,
     TOGGLE_USER_ACTIONS, ZERO_OUT_SLIDERS,
     FORGOT_PASSWORD
@@ -45,19 +45,19 @@ export const toggleModal = (modalSelection: string) => (dispatch, getState) => {
 
 }
 
-export const handleDrag = (mxType: string, selection: string, ui: {x: number}) => (dispatch, getState) => {
+export const handleDrag = (mxSelection: string, ui: {x: number}) => (dispatch, getState) => {
     const metric = getState().memberState.metric
     let deltaValue
-    if (mxType === `${Mx.Calories}`){
+    if (mxSelection === `${Mx.CaloriesConsumed}` || mxSelection === `${Mx.CaloriesBurned}`){
         deltaValue = Math.round((ui.x * Calories.MaxSlideAdjust) / UI.ProgressBarWidth)
-        dispatch({type: HANDLE_DRAG, mxType, selection, deltaValue})
-    } else if (mxType === `${Mx.Hydration}`) {
+        dispatch({type: HANDLE_DRAG, mxSelection, deltaValue, position: ui.x})
+    } else if  (mxSelection === `${Mx.Hydrated}` || mxSelection === `${Mx.Dehydrated}`) {
         if (metric){
             deltaValue = +((ui.x * Hydration.MaxSlideAdjustMetric) / UI.ProgressBarWidth).toFixed(3)
         } else {
             deltaValue = Math.round((ui.x * Hydration.MaxSlideAdjustImperial) / UI.ProgressBarWidth)
         }
-        dispatch({type: HANDLE_DRAG, mxType, selection, deltaValue})
+        dispatch({type: HANDLE_DRAG, mxSelection, deltaValue, position: ui.x})
     } else {
         return null
     }
@@ -91,3 +91,22 @@ export const forgotPassword = () => {
 export const weighIn = () => {
     return ({type: WEIGH_IN})
 }
+
+export const step = (inputType: string, direction: string, step: number) =>
+    (dispatch, getState) => {
+        const currentStep = getState().appState.inputs[inputType].step
+        const maxSteps = getState().appState.inputs[inputType].numSteps
+        if (direction === 'back'){
+            if (currentStep !== 1){
+                dispatch({type: CHANGE_STEP, inputType, newStep: (currentStep - 1)})
+            }
+        } else if (direction === 'forward'){
+            if (currentStep !== maxSteps) {
+                dispatch({type: CHANGE_STEP, inputType, newStep: (currentStep + 1)})
+            }
+        } else if (direction === 'to') {
+
+        } else {
+            return null
+        }
+    }

@@ -1,11 +1,20 @@
 import {FooterButtons, Modals} from '../../../content/utils/Enums'
 
 export const appState: AppStateTypes = {
-    signedIn: false,
-    showNavigateButton: true,
-    moveBox: false,
-    spinLogo: true,
+    signedIn: true,
+    adjustableSliderValues: {
+        caloriesConsumed: 0,
+        caloriesBurned: 0,
+        hydrated: 0,
+        dehydrated: 0,
+    },
     inputs: {
+        adjustableSlider: {
+            caloriesConsumed: 0,
+            caloriesBurned: 0,
+            hydrated: 0,
+            dehydrated: 0,
+        },
         signIn: {
             email: '',
             password: '',
@@ -19,7 +28,8 @@ export const appState: AppStateTypes = {
             weight: null,
         },
         createMember: {
-            step: 1,
+            step: 3,
+            numSteps: 4,
             email: '',
             confirmEmail: '',
             password: '',
@@ -53,16 +63,7 @@ export const appState: AppStateTypes = {
     userActionsDrawerClass: '',
     showModal: false,
     modalSelection: Modals.None,
-    adjustableSlider: {
-        calories: {
-            consumed: 0,
-            burned: 0,
-        },
-        hydration: {
-            hydrated: 0,
-            dehydrated: 0,
-        }
-    },
+
     spinners: {
         signIn: false,
         forgotPassword: false,
@@ -73,9 +74,7 @@ export const appState: AppStateTypes = {
 
 export interface AppStateTypes {
     signedIn: boolean;
-    showNavigateButton: boolean;
-    moveBox: boolean;
-    spinLogo: boolean;
+    adjustableSliderValues: AdjustableSliderValuesTypes;
     inputs: InputTypes;
     activeFooterButton: string;
     showActionsBackButton: boolean;
@@ -83,12 +82,17 @@ export interface AppStateTypes {
     userActionsDrawerClass: string;
     showModal: boolean;
     modalSelection: string;
-    adjustableSlider: AdjustableSliderTypes;
     spinners: SpinnerTypes;
     error: string;
 }
 
 export interface InputTypes {
+    adjustableSlider: {
+        caloriesConsumed: number;
+        caloriesBurned: number;
+        hydrated: number;
+        dehydrated: number;
+    },
     signIn: {
         email: string;
         password: string;
@@ -103,6 +107,7 @@ export interface InputTypes {
     },
     createMember: {
         step: number;
+        numSteps: 4;
         email: string;
         confirmEmail: string;
         password: string;
@@ -127,12 +132,14 @@ export interface InputTypes {
         metric: boolean;
         gender: number;
         targetWeightChange: number;
-    }
-
+    },
 }
-export interface AdjustableSliderTypes {
-    calories: {consumed: number; burned: number;};
-    hydration: {hydrated: number; dehydrated: number;};
+
+export interface AdjustableSliderValuesTypes {
+    caloriesConsumed: number;
+    caloriesBurned: number;
+    hydrated: number;
+    dehydrated: number;
 }
 
 export interface SpinnerTypes {

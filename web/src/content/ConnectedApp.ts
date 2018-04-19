@@ -3,7 +3,7 @@ import { withRouter } from 'react-router-dom'
 import { push } from 'react-router-redux'
 import App from './App'
 import {
-    changeInputValue, handleDrag, navigateTo, signIn, signOut, switchButtonSelected, toggleModal,
+    changeInputValue, handleDrag, navigateTo, signIn, signOut, step, switchButtonSelected, toggleModal,
     toggleUserActions, forgotPassword, weighIn,
 } from '../redux/actions/index'
 import { AppStateTypes } from '../redux/store/templates/appState'
@@ -67,8 +67,8 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         toggleModal: (modalSelection: string) => (event: MouseEvent) => {
             dispatch(toggleModal(modalSelection))
         },
-        handleDrag: (mxType: string, selection: string) => (event: MouseEvent, ui: {x: number}) =>  {
-            dispatch(handleDrag(mxType, selection, ui))
+        handleDrag: (mxSelection: string) => (event: MouseEvent, ui: {x: number}) =>  {
+            dispatch(handleDrag(mxSelection, ui))
         },
         signOut: () => {
             dispatch(signOut())
@@ -83,11 +83,14 @@ const mapDispatchToProps = (dispatch, ownProps) => {
             dispatch(weighIn())
         },
         stepBack: (inputType: string) => (event: MouseEvent) => {
-
+            dispatch(step(inputType, 'back', null))
         },
         stepForward: (inputType: string) => (event: MouseEvent) => {
-
+            dispatch(step(inputType, 'forward', null))
         },
+        stepTo: (inputType: string) => (event: MouseEvent, stepNumber: number) => {
+            dispatch(step(inputType, 'to', stepNumber))
+        }
     }
 }
 

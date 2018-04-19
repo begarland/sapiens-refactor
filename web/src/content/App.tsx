@@ -23,8 +23,8 @@ export interface AppTypes {
     navigateBackFromNestedAction: (event: MouseEvent) => void;
     navigateTo: (location: string) => (event: MouseEvent) => void;
     toggleUserActions: (event: MouseEvent) => void;
-    toggleModal: (string) => (event: MouseEvent) => void;
-    handleDrag: (mxType: string, selection: string) => (event: MouseEvent, ui: {x: number}) => void;
+    toggleModal: (modalSelection: string) => (event: MouseEvent) => void;
+    handleDrag: (mxSelection: string) => (event: MouseEvent, ui: {x: number}) => void;
     inputChange: (inputType: string) => (id: string, value: string | boolean) => void;
     signIn: () => void;
     signOut: () => void;
@@ -32,6 +32,7 @@ export interface AppTypes {
     weighIn: () => void;
     stepBack: (inputType: string) => (event: MouseEvent) => void;
     stepForward: (inputType: string) => (event: MouseEvent) => void;
+    stepTo: (inputType: string) => (event: MouseEvent, stepNumber: number) => void;
 
 }
 
