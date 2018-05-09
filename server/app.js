@@ -18,7 +18,7 @@ app.use(bodyParser.urlencoded({extended: false}))
 app.use(cookieParser())
 app.use(express.static(path.join(__dirname, '../web/public')))
 
-app.get('*', (req, res) => {
+app.get('/', (req, res) => {
     res.sendFile('/web/public/index.html', {'root': __dirname + '/../'})
 })
 

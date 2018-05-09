@@ -22,7 +22,7 @@ export const appState: AppStateTypes = {
         },
         forgotPassword: {
             email: '',
-            emailExistsInDB: null,
+            databaseQueried: null,
         },
         weighIn: {
             weight: null,
@@ -100,7 +100,7 @@ export interface InputTypes {
     },
     forgotPassword: {
         email: string;
-        emailExistsInDB: null | boolean;
+        databaseQueried: null | boolean;
     },
     weighIn: {
         weight: null | number;

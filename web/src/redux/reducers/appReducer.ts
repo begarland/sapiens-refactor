@@ -24,18 +24,13 @@ export default (state: AppStateTypes = appState, action) => {
             }
         }
         case CHANGE_INPUT_VALUE: {
-            let value = action.value
-            if (action.value === 'true' || action.value === 'false'){
-                value = JSON.parse(action.value)
-            }
-            let key = (action.key).split('_').pop()
             return {
                 ...state,
                 inputs: {
                     ...state.inputs,
                     [action.inputType]: {
                         ...state.inputs[action.inputType],
-                        [key]: value,
+                        [action.key]: action.value,
                     }
                 }
             }
@@ -69,19 +64,20 @@ export default (state: AppStateTypes = appState, action) => {
                 adjustableSliderValues: {
                     ...state.adjustableSliderValues,
                     [action.mxSelection]: action.position
-                }
+                },
                 inputs: {
                     ...state.inputs,
                     adjustableSlider: {
                         ...state.inputs.adjustableSlider,
                         [action.mxSelection]: action.deltaValue
                     },
-                }
+                },
             }
         }
         case ZERO_OUT_SLIDERS: {
             return {
                 ...state,
+                adjustableSliderValues: appState.adjustableSliderValues,
                 inputs: appState.inputs
             }
         }
@@ -137,7 +133,12 @@ export default (state: AppStateTypes = appState, action) => {
         case FORGOT_PASSWORD_SUCCESSFUL: {
             return {
                 ...state,
-                inputs: appState.inputs,
+                inputs: {
+                    forgotPassword: {
+                        email: '',
+                        databaseQueried: true,
+                    }
+                },
                 spinners: {
                     ...state.spinners,
                     forgotPassword: false,
@@ -147,7 +148,12 @@ export default (state: AppStateTypes = appState, action) => {
         case FORGOT_PASSWORD_FAILED: {
             return {
                 ...state,
-                inputs: appState.inputs,
+                inputs: {
+                    forgotPassword: {
+                        email: '',
+                        databaseQueried: null,
+                    }
+                },
                 spinners: {
                     ...state.spinners,
                     forgotPassword: false,

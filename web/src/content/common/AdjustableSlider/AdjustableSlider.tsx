@@ -13,7 +13,7 @@ export interface AdjustableSliderTypes {
     largeTickLocations: number [];
     numSmallTicks: number;
     handleDrag: (MouseEvent, Object) => void;
-    inputChange: (inputType: string) => (id: string, value: string | boolean | number) => void;
+    inputChange: (id: string, value: string | boolean | number) => void;
 
 
 
@@ -22,8 +22,10 @@ export interface AdjustableSliderTypes {
 const AdjustableSlider = (props: AdjustableSliderTypes) => {
     return (
         <div className="slider-container">
-            <h4 id={props.id + '-label'} className="slider-label">{props.label}:</h4>
-            <SliderValueInput id={props.id} units={props.units} deltaValue={props.deltaValue} onInputChange={props.inputChange}/>
+            <div className="slider-label-input-container">
+                <h4 id={props.id + '-label'} className="slider-label">{props.label}:</h4>
+                <SliderValueInput id={props.id} units={props.units} deltaValue={props.deltaValue} onInputChange={props.inputChange}/>
+            </div>
             <div className="slider-bar">
                 <Ticks largeTickLocations={props.largeTickLocations} numSmallTicks={props.numSmallTicks}/>
                 <Draggable

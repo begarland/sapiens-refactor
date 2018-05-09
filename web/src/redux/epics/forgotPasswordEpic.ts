@@ -13,10 +13,9 @@ const forgotPasswordEpic = (action$, store) => {
                     headers: headers
                 })
                 .then(response => {
-                    return ({type: FORGOT_PASSWORD_SUCCESSFUL, emailExistsinDB: response.data.id})
+                    return ({type: FORGOT_PASSWORD_SUCCESSFUL})
                 })
                 .catch((error) => {
-                    console.error(error.message)
                     return ({type: FORGOT_PASSWORD_FAILED, error: error.message})
 
                 })

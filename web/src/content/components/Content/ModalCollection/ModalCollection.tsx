@@ -117,7 +117,7 @@ const ModalCollection = (props: ModalCollectionTypes) => {
 
     } else if (modalSelection === Modals.ForgotPassword) {
         modalHeader = {title: 'Forgot Password?', showCloseButton: true, closeModal: closeModal}
-        if (props.appState.inputs.forgotPassword.emailExistsInDB === true) {
+        if (props.appState.inputs.forgotPassword.databaseQueried === true) {
             ModalContent = (
                 <div id="forgot-password-modal-content" className="single-line-modal">
                     <LabelComponent additionalClasses="full-width-label" label="A password reset email has been sent!"

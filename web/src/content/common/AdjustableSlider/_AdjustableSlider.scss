@@ -21,13 +21,36 @@
   @include label;
   margin: 0;
   text-align: left;
-  margin-top: 10px;
   display: inline-block;
+  margin-top: 10px;
+  float: left;
 
+}
+
+.slider-label-input-container{
+  display: inline-block;
+  width: 100%;
+
+  .input-container {
+    display: inline-block;
+    float: right;
+
+    input {
+      text-align: right;
+    }
+
+    .slider-label {
+      width: 60px;
+      margin: 0;
+    }
+  }
 }
 
 .slider-extra-data {
   text-align: right;
+  width: 20%;
+  margin-left: 5px;
+  margin-top: 5px;
 }
 
 .slider-bar {

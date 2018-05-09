@@ -15,8 +15,6 @@ const weighInEpic = (action$, store) =>
                     return ({type: WEIGH_IN_SUCCESSFUL})
                 })
                 .catch((error) => {
-                    console.error(error.message)
-
                     return ({type: WEIGH_IN_FAILED, error: error.message})
 
                 })

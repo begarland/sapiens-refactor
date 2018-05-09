@@ -16,8 +16,6 @@ const signInEpic = (action$, store) =>
                     return ({type: SIGN_IN_SUCCESSFUL, member: response.data.id})
                 })
                 .catch((error) => {
-                    console.error(error.message)
-
                     return ({type: SIGN_IN_FAILED, error: error.message})
 
                 })

@@ -3,13 +3,14 @@ import { withRouter } from 'react-router-dom'
 import { push } from 'react-router-redux'
 import App from './App'
 import {
-    changeInputValue, handleDrag, navigateTo, signIn, signOut, step, switchButtonSelected, toggleModal,
-    toggleUserActions, forgotPassword, weighIn,
+    changeInputValue, handleDrag, navigateTo, step, switchButtonSelected, toggleModal,
+    toggleUserActions,
 } from '../redux/actions/index'
 import { AppStateTypes } from '../redux/store/templates/appState'
 import { DailyStateTypes } from '../redux/store/templates/dailyState'
 import { MemberStateTypes } from '../redux/store/templates/memberState'
 import {Paths} from './utils/Enums'
+import {FORGOT_PASSWORD, SIGN_IN, SIGN_OUT, WEIGH_IN} from '../redux/actions/actionTypes'
 
 interface mapStateToPropsTypes {
     appState: AppStateTypes;
@@ -48,17 +49,14 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         },
         navigateTo: (location) => (event: MouseEvent) => {
             let newLocation
-
             if (ownProps.location.pathname === Paths.Actions){
                 newLocation = `${ownProps.location.pathname}${location}`
             } else {
                 newLocation = `${location}`
             }
-
             if (location === Paths.Register){
                 newLocation = `${location}`
             }
-
             dispatch(navigateTo(newLocation))
         },
         toggleUserActions: () => {
@@ -70,18 +68,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         handleDrag: (mxSelection: string) => (event: MouseEvent, ui: {x: number}) =>  {
             dispatch(handleDrag(mxSelection, ui))
         },
-        signOut: () => {
-            dispatch(signOut())
-        },
-        signIn: () => {
-            dispatch(signIn())
-        },
-        forgotPassword: () => {
-            dispatch(forgotPassword())
-        },
-        weighIn: () => {
-            dispatch(weighIn())
-        },
         stepBack: (inputType: string) => (event: MouseEvent) => {
             dispatch(step(inputType, 'back', null))
         },
@@ -90,7 +76,20 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         },
         stepTo: (inputType: string) => (event: MouseEvent, stepNumber: number) => {
             dispatch(step(inputType, 'to', stepNumber))
-        }
+        },
+
+        signOut: () => {
+            dispatch({type: SIGN_OUT})
+        },
+        signIn: () => {
+            dispatch({type: SIGN_IN})
+        },
+        forgotPassword: () => {
+            dispatch({type: FORGOT_PASSWORD})
+        },
+        weighIn: () => {
+            dispatch({type: WEIGH_IN})
+        },
     }
 }
 

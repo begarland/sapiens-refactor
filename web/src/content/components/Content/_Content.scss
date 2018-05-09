@@ -7,22 +7,7 @@
   overflow-x: hidden;
   overflow-y: hidden;
 
-  #mobile-and-portrait-tablet-content{
-    display: none;
 
-    @media (max-width: $portrait-tablet-to-landscape-and-desktop-min-width){
-      display: block;
-
-    }
-  }
-
-  #landscape-tablet-and-above-content{
-    display: none;
-
-    @media (min-width: $portrait-tablet-to-landscape-and-desktop-min-width + 1){
-      display: block;
-    }
-  }
 
   @media (min-width: $portrait-tablet-to-landscape-and-desktop-min-width + 1){
     display: inline;

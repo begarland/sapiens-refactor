@@ -6,13 +6,12 @@ interface SliderValueInputTypes {
     units: string;
     deltaValue: number;
     onInputChange: (id: string, value: string | boolean) => void;
-
 }
 
 const SliderValueInput = (props: SliderValueInputTypes) => {
 
     const inputArray: SingleInputTypes [] = [
-        {id: props.id, inputType: "number",  data: props.deltaValue, extraData: props.units, additionalInputClasses: 'slider-label', extraDataAdditionalClasses: 'slider-extra-data'}
+        {id: props.id, inputType: "number", min: "0", data: props.deltaValue , extraData: props.units, additionalInputClasses: 'slider-label', extraDataAdditionalClasses: 'slider-extra-data'}
     ]
 
     return (

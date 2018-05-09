@@ -9,6 +9,7 @@ export interface SingleInputTypes {
     additionalLabelClasses?: string;
     hideColon?: boolean;
     inputType?: string;
+    min?: string;
     additionalInputClasses?: string;
     selectOptions?: {text: string, value: string | boolean}[];
     data: any;
@@ -27,7 +28,7 @@ export interface InputGeneratorTypes {
 
 const InputGenerator = (props: InputGeneratorTypes) => {
     return (
-        <div className="input-container">
+        <div className={`input-container`}>
             {props.inputArray.map((input: SingleInputTypes, index: number)=> {
                 if (input.inputType === 'select'){
                     return (
