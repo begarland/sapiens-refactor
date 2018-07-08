@@ -44,6 +44,33 @@
  @include input;
 }
 
+
+.input-with-moving-placeholder {
+  position: relative;
+  width: 50%;
+  margin: auto;
+
+  .moving-placeholder {
+    position: absolute;
+    pointer-events: none;
+    top: 5px;
+    left: 10px;
+
+  }
+
+  input {
+    width: 100%;
+    border: $light-gray-border;
+    &:hover {
+      top: -6px;
+      border: $red-border;
+    }
+    &:focus {
+      background-color: #992288;
+    }
+  }
+}
+
 .inline-input-container{
   margin: auto;
   text-align: left;
@@ -57,6 +84,7 @@
 .button {
   @include button;
 }
+
 
 .inline-button {
   display: inline;
@@ -109,4 +137,33 @@
 
 .current-step {
   background-color: $green;
+}
+
+@-webkit-keyframes scale-down-tl {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+  }
+}
+@keyframes scale-down-tl {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    -webkit-transform-origin: 0% 0%;
+    transform-origin: 0% 0%;
+  }
 }

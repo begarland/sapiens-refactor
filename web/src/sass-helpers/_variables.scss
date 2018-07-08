@@ -20,7 +20,6 @@ $web-app-width-iPhone6Plus: 736px;
 
 
 /* color blind safe color palette - see: https://personal.sron.nl/~pault/ */
-$gray: #777777;
 $red: #EE3333;
 $orange: #EE7722;
 $yellow: #FFEE33;
@@ -29,14 +28,17 @@ $green: #66AA55;
 $teal: #11AA99;
 $blue: #3366AA;
 $purple: #992288;
-$white: #FFFFFF;
 $black: #222222;
+$gray: #777777;
+$light-gray: #E5E5E9;
+$white: #FFFFFF;
 
 /* fonts */
 
 $header-font: 'carbon';
 $regular-font: Arial;
 $regular-font-size: 16px;
+$small-font-size: 13px;
 
 /* style guide */
 $button-fill: $green;
@@ -49,6 +51,8 @@ $mobile-footer-height: 50px;
 $gray-border: 1px solid $gray;
 $black-border: 2px solid $black;
 $white-border: 2px solid $white;
+$red-border: 2px solid $red;
+$light-gray-border: $light-gray 1px solid;
 
 $nutrition-console-width: 430px;
 

@@ -33,7 +33,6 @@ export const changeInputValue = (inputType: string, key: string, value: string) 
     if (value === 'true' || value === 'false'){
         formattedValue = JSON.parse(value)
     }
-    let formattedKey = (key).split('_').pop()
     if (inputType === 'adjustableSlider'){
         const mxSelection = key
         const dispatchValues = calculatePositionByType(mxSelection, +formattedValue, metric)
@@ -41,7 +40,7 @@ export const changeInputValue = (inputType: string, key: string, value: string) 
         dispatch({type: HANDLE_DRAG, mxSelection, deltaValue, position})
 
     } else {
-        dispatch({type: CHANGE_INPUT_VALUE, inputType, key: formattedKey, value: formattedValue})
+        dispatch({type: CHANGE_INPUT_VALUE, inputType, key, value: formattedValue})
     }
 }
 

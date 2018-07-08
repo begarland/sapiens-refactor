@@ -1,5 +1,5 @@
 import * as React from 'react'
-import LabelComponent from '../LabelComponent/LabelComponent'
+import LabelComponent from '../Label/Label'
 
 interface StepDisplayTypes {
     numSteps: number;

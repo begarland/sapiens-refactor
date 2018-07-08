@@ -1,7 +1,7 @@
 import * as React from 'react'
 import {AppTypes} from '../../../../App'
 import InputGenerator, {SingleInputTypes} from '../../../../common/InputGenerator/InputGenerator'
-import LabelComponent from '../../../../common/LabelComponent/LabelComponent'
+import LabelComponent from '../../../../common/Label/Label'
 
 
 interface ForgotPasswordModalContentTypes extends AppTypes {

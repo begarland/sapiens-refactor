@@ -1,6 +1,6 @@
 import * as React from 'react'
 import {SingleInputTypes} from '../InputGenerator'
-import LabelComponent from '../../LabelComponent/LabelComponent'
+import LabelComponent from '../../Label/Label'
 
 interface CheckboxTypes extends SingleInputTypes{
     onInputChange: (id: string, value: boolean) => void;

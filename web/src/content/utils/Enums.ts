@@ -1,80 +1,92 @@
 export enum Units {
-    CaloriesMetric = 'kCals',
     CaloriesImperial = 'cals',
-    HydrationMetric = 'L',
-    HydrationImperial = 'oz',
-    WeightMetric = 'kg',
-    WeightImperial = 'lb',
+    CaloriesMetric = 'kCals',
+    HeightImperial = 'in',
     HeightMetric = 'cm',
-    HeightImperial = 'in'
+    HydrationImperial = 'oz',
+    HydrationMetric = 'L',
+    WeightImperial = 'lb',
+    WeightMetric = 'kg',
 }
 
 export enum Mx {
     Calories = 'calories',
-    Hydration = 'hydration',
-    CaloriesConsumed = 'caloriesConsumed',
     CaloriesBurned = 'caloriesBurned',
+    CaloriesConsumed = 'caloriesConsumed',
+    Dehydrated = 'dehydrated',
     Hydrated = 'hydrated',
-    Dehydrated = 'dehydrated'
+    Hydration = 'hydration',
 }
 
 export enum Calories {
-    Consumed = 'consumed',
-    Burned = 'burned',
     Allotted = 'allotted',
-    Target = 'target',
-    MaxSlideAdjust = 2500,
     BarFillColor = '#1B7837',
     BarInnerFillColor = '#5AAE61',
     BarTotalFillColor = '#CAE9AB',
+    Burned = 'burned',
+    Consumed = 'consumed',
+    MaxSlideAdjust = 2500,
+    Target = 'target',
 }
 
 export enum Hydration {
-    Hydrated = 'hydrated',
-    Dehydrated = 'dehydrated',
-    BaseHydration = 'base hydration',
-    Target = 'target',
-    MaxSlideAdjustMetric = 5,
-    MaxSlideAdjustImperial = 160,
     BarFillColor = '#2166AC',
     BarInnerFillColor = '#328DC1',
     BarTotalFillColor = '#92C5DE',
+    BaseHydration = 'base hydration',
+    Dehydrated = 'dehydrated',
+    Hydrated = 'hydrated',
+    MaxSlideAdjustImperial = 160,
+    MaxSlideAdjustMetric = 5,
+    Target = 'target',
 }
 
 export enum UI {
-    SliderBarWidth = 300,
     ProgressBarWidth = 300,
+    SliderBarWidth = 300,
 }
 
 export enum FooterButtons {
+    Actions = 'actions',
     Nutrition = 'nutrition',
-    Actions = 'actions'
 }
 
 export enum Modals {
-    None = 'none',
-    SignInOrRegister = 'sign-in-or-register',
-    SignIn = 'sign-in',
+    Calories = 'calories',
+    Error = 'error',
     ForgotPassword = 'forgot-password',
+    Hydration = 'hydration',
+    None = 'none',
+    SignIn = 'sign-in',
+    SignInOrRegister = 'sign-in-or-register',
     SignOut = 'sign-out',
     WeighIn = 'weigh-in',
-    Calories = 'calories',
-    Hydration = 'hydration',
-    Error = 'error',
 }
 
 export enum Spinners {
+    ForgotPassword = 'forgot-password',
     SignIn = 'sign-in',
-    ForgotPassword = 'forgot-password'
 }
 
 export enum Paths {
     Actions = '/actions',
+    EditProfile = '/editProfile',
     Favorites = '/favorites',
-    History = '/history',
     Goals = '/goals',
-    Search = '/search',
+    History = '/history',
     Register = '/register',
-    EditProfile = '/editProfile'
+    Search = '/search',
 
+}
+
+export enum HTMLInputTypes {
+    CheckBox = 'checkbox',
+    Date = 'date',
+    Email = 'email',
+    Number = 'number',
+    Password = 'password',
+    Range = 'range',
+    Select = 'select',
+    Text = 'text',
+    WithMovingPlaceholder = 'with-moving-placeholder',
 }

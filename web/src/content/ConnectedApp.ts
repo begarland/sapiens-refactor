@@ -77,7 +77,6 @@ const mapDispatchToProps = (dispatch, ownProps) => {
         stepTo: (inputType: string) => (event: MouseEvent, stepNumber: number) => {
             dispatch(step(inputType, 'to', stepNumber))
         },
-
         signOut: () => {
             dispatch({type: SIGN_OUT})
         },

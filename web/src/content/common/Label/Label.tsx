@@ -1,6 +1,6 @@
 import * as React from 'react'
 
-interface LabelComponentTypes {
+export interface LabelComponentTypes {
     label: string;
     additionalClasses?: string;
     hideColon?: boolean;

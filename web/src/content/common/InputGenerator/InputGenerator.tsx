@@ -2,6 +2,8 @@ import * as React from 'react'
 import Select from './Inputs/Select'
 import Input from './Inputs/Input'
 import Checkbox from './Inputs/Checkbox'
+import InputWithMovingPlaceholder from './InputWithMovingPlaceholder'
+import {HTMLInputTypes} from '../../utils/Enums'
 
 export interface SingleInputTypes {
     id: string;
@@ -15,6 +17,7 @@ export interface SingleInputTypes {
     data: any;
     extraData?: string;
     extraDataAdditionalClasses?: string;
+    nonstandardInputType?: string;
 
 
 }
@@ -30,18 +33,22 @@ const InputGenerator = (props: InputGeneratorTypes) => {
     return (
         <div className={`input-container`}>
             {props.inputArray.map((input: SingleInputTypes, index: number)=> {
-                if (input.inputType === 'select'){
+                if (input.inputType === HTMLInputTypes.Select){
                     return (
                         <Select {...input} key={index} onInputChange={props.onInputChange}/>
                     )
-                } else if (input.inputType === 'checkbox'){
+                } else if (input.inputType === HTMLInputTypes.CheckBox){
                     return (
                         <Checkbox {...input} key={index} onInputChange={props.onInputChange}/>
                     )
-                } else if (input.inputType === 'range'){
+                } else if (input.inputType === HTMLInputTypes.Range){
 
-                } else if (input.inputType === 'date'){
+                } else if (input.inputType === HTMLInputTypes.Date) {
 
+                } else if (input.nonstandardInputType === HTMLInputTypes.WithMovingPlaceholder){
+                    return(
+                        <InputWithMovingPlaceholder {...input} key={index} onInputChange={props.onInputChange}/>
+                    )
                 }
                 return (
                     <Input {...input} key={index} onInputChange={props.onInputChange}/>

@@ -1,7 +1,7 @@
 import {FooterButtons, Modals} from '../../../content/utils/Enums'
 
 export const appState: AppStateTypes = {
-    signedIn: true,
+    signedIn: false,
     adjustableSliderValues: {
         caloriesConsumed: 0,
         caloriesBurned: 0,
@@ -28,7 +28,7 @@ export const appState: AppStateTypes = {
             weight: null,
         },
         createMember: {
-            step: 3,
+            step: 1,
             numSteps: 4,
             email: '',
             confirmEmail: '',
